@@ -579,7 +579,10 @@ describe("Tier 3 offline product-learning stream", () => {
           expect(systemPrompt).not.toMatch(/P1042|Maya/);
           return {
             answer: "Affordability is a useful discovery signal, not a validated prevalence estimate.",
-            evidence: [{ themeId: "affordability", claim: "Cost pressure appears in this sample." }],
+            evidence: [
+              { themeId: "affordability", claim: "Cost pressure appears in this sample." },
+              { themeId: "affordability", claim: "The same theme should not render twice." },
+            ],
             suggestedActions: ["Interview patients about when cost becomes a continuation barrier."],
             limitation: "The sample is small and synthetic.",
           };
@@ -595,6 +598,7 @@ describe("Tier 3 offline product-learning stream", () => {
       mentionCount: affordability.mentionCount,
       coverage: "gap",
     });
+    expect(result.evidence).toHaveLength(1);
   });
 
   it("rejects invented model citations and falls back to verified aggregates", async () => {

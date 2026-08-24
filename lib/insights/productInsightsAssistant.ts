@@ -198,17 +198,20 @@ function attachVerifiedEvidence(
   parsed: z.infer<typeof insightAnswerSchema>,
 ): Omit<ProductInsightAnswer, "generation"> {
   const themesById = new Map(report.themes.map((theme) => [theme.id, theme]));
-  const evidence = parsed.evidence.map((item) => {
+  const seenThemeIds = new Set<string>();
+  const evidence = parsed.evidence.flatMap((item) => {
     const theme = themesById.get(item.themeId);
     if (!theme) throw new Error(`Model cited unknown theme: ${item.themeId}`);
-    return {
+    if (seenThemeIds.has(theme.id)) return [];
+    seenThemeIds.add(theme.id);
+    return [{
       themeId: theme.id,
       themeTitle: theme.title,
       claim: item.claim,
       patientCount: theme.patientCount,
       mentionCount: theme.mentionCount,
       coverage: theme.coverage,
-    };
+    }];
   });
 
   return { ...parsed, evidence };
