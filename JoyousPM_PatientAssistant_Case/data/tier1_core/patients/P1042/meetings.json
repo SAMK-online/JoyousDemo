@@ -1,0 +1,53 @@
+{
+  "_note": "Synthetic data created for an interview exercise. Not real patients.",
+  "uid": "P1042",
+  "meetings": [
+    {
+      "meeting_id": "m_1042_nm",
+      "type": "NM",
+      "status": "Approved",
+      "custom_status": "Approved",
+      "is_hhh": false,
+      "scheduled_at": "2026-03-02T15:30:00",
+      "duration": 30,
+      "provider": "K. Alvarez, PMHNP-BC",
+      "assigned_nurse": "T. Okafor, RN",
+      "icd10_codes": [
+        "F33.1",
+        "F41.1"
+      ],
+      "billing_status": "",
+      "audit_status": "completed",
+      "prescription": {
+        "strength": 60,
+        "type_of_prescription": "60_ts",
+        "number_of_refills": 0,
+        "confirmation": true
+      },
+      "note_ref": "visit_notes.json#vn_1042_nm"
+    },
+    {
+      "meeting_id": "m_1042_fu1",
+      "type": "FU",
+      "status": "Approved",
+      "custom_status": "Approved",
+      "is_hhh": false,
+      "scheduled_at": "2026-04-06T11:00:00",
+      "duration": 15,
+      "provider": "K. Alvarez, PMHNP-BC",
+      "assigned_nurse": null,
+      "icd10_codes": [
+        "F33.1"
+      ],
+      "billing_status": "",
+      "audit_status": "completed",
+      "prescription": {
+        "strength": 60,
+        "type_of_prescription": "60_ts",
+        "number_of_refills": 5,
+        "confirmation": true
+      },
+      "note_ref": "visit_notes.json#vn_1042_fu1"
+    }
+  ]
+}

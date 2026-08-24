@@ -1,0 +1,71 @@
+{
+  "_note": "Synthetic data created for an interview exercise. Not real patients.",
+  "uid": "P1203",
+  "cases": [
+    {
+      "case_id": "c_1203_intake",
+      "case_type": "intake",
+      "case_group": "patient_chart",
+      "status": "close",
+      "next_action": "patient",
+      "opened_at": "2026-07-20",
+      "closed_at": "2026-07-21",
+      "form_ref": "forms/intake_form.json"
+    },
+    {
+      "case_id": "c_1203_payment",
+      "case_type": "payment",
+      "case_group": "patient_chart",
+      "status": "close",
+      "next_action": null,
+      "opened_at": "2026-07-27",
+      "closed_at": "2026-07-28",
+      "source": "manual",
+      "charges": [
+        {
+          "date": "2026-07-28",
+          "amount_usd": 129.0,
+          "description": "Subscription activation"
+        }
+      ]
+    },
+    {
+      "case_id": "c_1203_treatment",
+      "case_type": "treatment",
+      "case_group": "treatment",
+      "status": "open",
+      "next_action": "patient",
+      "opened_at": "2026-07-27",
+      "closed_at": null,
+      "checkins_count": 0,
+      "case_refs": {
+        "payment": "close",
+        "medication_order": null,
+        "start_date": null
+      }
+    },
+    {
+      "case_id": "c_1203_hhh",
+      "case_type": "hhh",
+      "case_group": "appointment_task",
+      "status": "open",
+      "next_action": "patient",
+      "opened_at": "2026-07-27",
+      "closed_at": null,
+      "meeting_ref": "m_1203_nm",
+      "requirement": "government_photo_id",
+      "requirement_received": false,
+      "days_open": 23
+    },
+    {
+      "case_id": "c_1203_create_rx",
+      "case_type": "create_prescription",
+      "case_group": "appointment_task",
+      "status": "open",
+      "next_action": "nurse",
+      "opened_at": "2026-07-27",
+      "closed_at": null,
+      "prescription_mismatch_found": false
+    }
+  ]
+}

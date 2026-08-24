@@ -1,0 +1,20 @@
+{
+  "_note": "Synthetic data created for an interview exercise. Not real patients.",
+  "flow_label": "intake",
+  "uid": "P1108",
+  "finalized": true,
+  "submitted_at": "2026-08-05",
+  "answers": {
+    "PHQ": 6,
+    "GAD": 5,
+    "DAST": 1,
+    "AUDIT": 19,
+    "PCL5_1": 0,
+    "nicotine": "yes",
+    "BMI": 27.8,
+    "why_come_to_joyous": "Work has been rough and I read this helps with burnout.",
+    "intentions_goals": "Sleep better, drink less.",
+    "current_medications": "none",
+    "medical_history": "hospitalized for pancreatitis 2024; drinks most evenings"
+  }
+}

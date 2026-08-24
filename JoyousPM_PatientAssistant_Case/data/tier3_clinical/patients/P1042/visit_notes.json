@@ -1,0 +1,143 @@
+{
+  "_note": "Synthetic data created for an interview exercise. Not real patients.",
+  "uid": "P1042",
+  "notes": [
+    {
+      "note_id": "vn_1042_nm",
+      "meeting_id": "m_1042_nm",
+      "date": "2026-03-02",
+      "meeting_type": "NM",
+      "participants": [
+        "T. Okafor, RN",
+        "K. Alvarez, PMHNP-BC",
+        "Patient"
+      ],
+      "transcript": [
+        {
+          "speaker": "Nurse",
+          "text": "Hi Maya, I'm Tara, one of the nurses. I'll take some background and then bring in the provider. How have things been?"
+        },
+        {
+          "speaker": "Patient",
+          "text": "Honestly, flat. I've been on sertraline about six years, tapered off in January. I function, I get the kids to school, I just don't feel much."
+        },
+        {
+          "speaker": "Nurse",
+          "text": "How's sleep and appetite?"
+        },
+        {
+          "speaker": "Patient",
+          "text": "Sleep is fine. Appetite fine. It's not dramatic, it's just grey."
+        },
+        {
+          "speaker": "Nurse",
+          "text": "Any thoughts of hurting yourself, or that you'd be better off not here?"
+        },
+        {
+          "speaker": "Patient",
+          "text": "No. Never that."
+        },
+        {
+          "speaker": "Nurse",
+          "text": "Any heart conditions, blood pressure issues, seizures?"
+        },
+        {
+          "speaker": "Patient",
+          "text": "No, all normal at my last physical."
+        },
+        {
+          "speaker": "Nurse",
+          "text": "Great. Let me bring in Kara, our provider."
+        },
+        {
+          "speaker": "Provider",
+          "text": "Hi Maya. I've read Tara's notes. Your intake put you at 19 on the depression scale and 15 on anxiety, which lines up with what you're describing."
+        },
+        {
+          "speaker": "Patient",
+          "text": "That sounds higher than it feels. I don't want to overstate it."
+        },
+        {
+          "speaker": "Provider",
+          "text": "You're not. If anything you're doing the opposite. I think this is appropriate for you. We start low - a quarter of the troche - and adjust based on what you tell us in the daily check-ins. The check-ins really matter; they're how I see what's happening."
+        },
+        {
+          "speaker": "Patient",
+          "text": "I can do that."
+        },
+        {
+          "speaker": "Provider",
+          "text": "I'll send one month to start. We'll meet again in about four weeks and if it's going well I'll write a longer prescription."
+        },
+        {
+          "speaker": "Patient",
+          "text": "Thank you."
+        },
+        {
+          "speaker": "Provider",
+          "text": "[after patient left] Tara, note that she minimises - she scored 19 and called it 'a bit grey'. Take her self-report as a floor, not a ceiling."
+        }
+      ],
+      "clinical_summary": "43F, recurrent MDD with anxious features, off sertraline 6 weeks. PHQ 19 / GAD 15. No cardiac history, no SI. Appropriate for VLD ketamine.",
+      "plan": "Start 15mg (60mg troche, quarter dose). Daily check-ins. 30-day supply, no refills. Review in 4 weeks. Note tendency to under-report severity."
+    },
+    {
+      "note_id": "vn_1042_fu1",
+      "meeting_id": "m_1042_fu1",
+      "date": "2026-04-06",
+      "meeting_type": "FU",
+      "participants": [
+        "K. Alvarez, PMHNP-BC",
+        "Patient"
+      ],
+      "transcript": [
+        {
+          "speaker": "Provider",
+          "text": "Maya, good to see you. Your scores have come down - 19 to 15 on depression, 15 to 11 on anxiety. How does it feel from the inside?"
+        },
+        {
+          "speaker": "Patient",
+          "text": "Better. I laughed at something my son did last week and it surprised me. That hasn't happened in a while."
+        },
+        {
+          "speaker": "Provider",
+          "text": "That's the kind of thing I look for. Any side effects?"
+        },
+        {
+          "speaker": "Patient",
+          "text": "Some nausea early on, gone now."
+        },
+        {
+          "speaker": "Provider",
+          "text": "You're at 30mg. The check-ins suggest you've got room to go up. I'm comfortable with the protocol taking you to 45."
+        },
+        {
+          "speaker": "Patient",
+          "text": "Whatever you think."
+        },
+        {
+          "speaker": "Provider",
+          "text": "I'm writing you a longer prescription - five shipments, so about five months. That covers you through the summer."
+        },
+        {
+          "speaker": "Patient",
+          "text": "And then what?"
+        },
+        {
+          "speaker": "Provider",
+          "text": "Then you book another visit with me before the refills run out, and we renew. You book it yourself from your account - we'll remind you."
+        },
+        {
+          "speaker": "Patient",
+          "text": "Got it."
+        },
+        {
+          "speaker": "Provider",
+          "text": "[note to file] Renewal depends on her booking. She cancelled her first attempt at this appointment and rebooked twice. If she goes quiet near the end of the script, someone should reach out rather than wait."
+        }
+      ],
+      "clinical_summary": "Good response at 4 weeks. PHQ 19->15, GAD 15->11. Mild early nausea, resolved. Tolerating well.",
+      "plan": "Continue titration to 45mg per protocol. Prescription renewed: 60mg troche, 5 refills. Patient to self-book renewal visit before refills exhausted. Flag: unreliable at booking, consider proactive outreach."
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "_note": "Synthetic data created for an interview exercise. Not real patients.",
+  "uid": "P1108",
+  "meetings": [
+    {
+      "meeting_id": "m_1108_nm",
+      "type": "NM",
+      "status": "Denied",
+      "custom_status": "Denied",
+      "is_hhh": false,
+      "scheduled_at": "2026-08-08T13:00:00",
+      "duration": 30,
+      "provider": "R. Whitfield, FNP-C",
+      "assigned_nurse": "S. Mbeki, RN",
+      "icd10_codes": [],
+      "billing_status": "",
+      "audit_status": "completed",
+      "prescription": null,
+      "status_transitions": [
+        {
+          "datetime": "2026-08-08T13:34:00",
+          "from_status": "Confirmed",
+          "to_status": "Hold"
+        },
+        {
+          "datetime": "2026-08-09T10:12:00",
+          "from_status": "Hold",
+          "to_status": "Denied"
+        }
+      ],
+      "note_ref": "visit_notes.json#vn_1108_nm"
+    }
+  ]
+}

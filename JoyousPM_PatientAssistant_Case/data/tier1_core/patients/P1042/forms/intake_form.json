@@ -1,0 +1,20 @@
+{
+  "_note": "Synthetic data created for an interview exercise. Not real patients.",
+  "flow_label": "intake",
+  "uid": "P1042",
+  "finalized": true,
+  "submitted_at": "2026-02-26",
+  "answers": {
+    "PHQ": 19,
+    "GAD": 15,
+    "DAST": 0,
+    "AUDIT": 3,
+    "PCL5_1": 0,
+    "nicotine": "no",
+    "BMI": 24.1,
+    "why_come_to_joyous": "I've been on two different antidepressants over six years and I'm tired of feeling flat.",
+    "intentions_goals": "Be present with my kids again.",
+    "current_medications": "sertraline 50mg (tapered off Jan 2026)",
+    "medical_history": "no cardiac history, no psychosis, BP normal"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "_note": "Synthetic data created for an interview exercise. Not real patients.",
+  "uid": "P1266",
+  "orders": [
+    {
+      "order_number": "SNS_126600",
+      "is_refill": false,
+      "shipDate": "2026-07-20",
+      "trackingNumber": "9405510288120044",
+      "pt_confirmed_delivery": true,
+      "status": "close",
+      "shipTo": {
+        "city": "Portland",
+        "state": "OR",
+        "postalCode": "97214"
+      },
+      "tracking": {
+        "statusCode": "DE",
+        "estimatedDeliveryDate": "2026-07-24",
+        "actualDeliveryDate": "2026-07-24",
+        "events": [
+          {
+            "occurredAt": "2026-07-24T14:03:00",
+            "eventCode": "DE",
+            "description": "Delivered, front door",
+            "cityLocality": "Boulder",
+            "stateProvince": "CO"
+          },
+          {
+            "occurredAt": "2026-07-21T03:41:00",
+            "eventCode": "IT",
+            "description": "In transit to next facility",
+            "cityLocality": "Milwaukee",
+            "stateProvince": "WI"
+          },
+          {
+            "occurredAt": "2026-07-20T16:12:00",
+            "eventCode": "AC",
+            "description": "Accepted at USPS origin facility",
+            "cityLocality": "Oshkosh",
+            "stateProvince": "WI"
+          }
+        ]
+      }
+    }
+  ]
+}

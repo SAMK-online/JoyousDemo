@@ -1,0 +1,81 @@
+{
+  "_note": "Synthetic data created for an interview exercise. Not real patients.",
+  "uid": "P1266",
+  "notes": [
+    {
+      "note_id": "vn_1266_nm",
+      "meeting_id": "m_1266_nm",
+      "date": "2026-07-15",
+      "meeting_type": "NM",
+      "participants": [
+        "S. Mbeki, RN",
+        "R. Whitfield, FNP-C",
+        "Patient"
+      ],
+      "transcript": [
+        {
+          "speaker": "Nurse",
+          "text": "Hi Alex. Can you tell me how long things have been difficult?"
+        },
+        {
+          "speaker": "Patient",
+          "text": "Years. Eight or nine. I've done four medications and a lot of therapy. Nothing has really moved it."
+        },
+        {
+          "speaker": "Nurse",
+          "text": "Your intake shows a hospital stay in 2019."
+        },
+        {
+          "speaker": "Patient",
+          "text": "I was inpatient for about ten days. That was the worst it's been."
+        },
+        {
+          "speaker": "Nurse",
+          "text": "Any thoughts of hurting yourself now?"
+        },
+        {
+          "speaker": "Patient",
+          "text": "Not actively. It crosses my mind sometimes but I wouldn't do anything."
+        },
+        {
+          "speaker": "Nurse",
+          "text": "Thank you for telling me. Any heart problems?"
+        },
+        {
+          "speaker": "Patient",
+          "text": "No."
+        },
+        {
+          "speaker": "Provider",
+          "text": "Alex, I'm Rebecca. Your scores are high - 22 depression, 18 anxiety - and you've been through a lot of options already. I do want to try this with you."
+        },
+        {
+          "speaker": "Patient",
+          "text": "How long until I know if it's working?"
+        },
+        {
+          "speaker": "Provider",
+          "text": "Most people get a sense within three to six weeks, but the first fortnight can be bumpy - nausea, sleep changes, sometimes feeling a bit worse before better."
+        },
+        {
+          "speaker": "Patient",
+          "text": "I've heard that before."
+        },
+        {
+          "speaker": "Provider",
+          "text": "I know. Here's what I'll ask of you: do the daily check-ins honestly, including the hard questions. That's how I see you between visits."
+        },
+        {
+          "speaker": "Patient",
+          "text": "Okay."
+        },
+        {
+          "speaker": "Provider",
+          "text": "[note to file] High baseline severity with prior inpatient admission and passive ideation on screening. I want close monitoring through the first month. If his scores climb rather than fall, or he goes quiet, bring him in early - do not simply titrate upward. Booking follow-up at 6 weeks but happy to see him sooner."
+        }
+      ],
+      "clinical_summary": "31M, treatment-resistant MDD with anxiety, 8-9 year history, four prior medication trials, inpatient admission 2019. PHQ 22 / GAD 18. Passive ideation on screening, no plan or intent. No cardiac history.",
+      "plan": "Approve. Start 15mg (60mg troche). Daily check-ins, honesty emphasised. 30-day supply. Close monitoring first month: if scores worsen or contact lapses, escalate and bring visit forward rather than increasing dose. FU booked 6 weeks."
+    }
+  ]
+}

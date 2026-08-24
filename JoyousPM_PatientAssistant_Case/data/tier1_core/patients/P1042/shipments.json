@@ -1,0 +1,259 @@
+{
+  "_note": "Synthetic data created for an interview exercise. Not real patients.",
+  "uid": "P1042",
+  "orders": [
+    {
+      "order_number": "SNS_104200",
+      "is_refill": false,
+      "shipDate": "2026-03-05",
+      "trackingNumber": "9405510290005518",
+      "pt_confirmed_delivery": true,
+      "status": "close",
+      "shipTo": {
+        "city": "Boulder",
+        "state": "CO",
+        "postalCode": "80302"
+      },
+      "tracking": {
+        "statusCode": "DE",
+        "estimatedDeliveryDate": "2026-03-09",
+        "actualDeliveryDate": "2026-03-09",
+        "events": [
+          {
+            "occurredAt": "2026-03-09T14:03:00",
+            "eventCode": "DE",
+            "description": "Delivered, front door",
+            "cityLocality": "Boulder",
+            "stateProvince": "CO"
+          },
+          {
+            "occurredAt": "2026-03-06T03:41:00",
+            "eventCode": "IT",
+            "description": "In transit to next facility",
+            "cityLocality": "Milwaukee",
+            "stateProvince": "WI"
+          },
+          {
+            "occurredAt": "2026-03-05T16:12:00",
+            "eventCode": "AC",
+            "description": "Accepted at USPS origin facility",
+            "cityLocality": "Oshkosh",
+            "stateProvince": "WI"
+          }
+        ]
+      }
+    },
+    {
+      "order_number": "SNS_104201",
+      "is_refill": true,
+      "shipDate": "2026-04-08",
+      "trackingNumber": "9405510290015518",
+      "pt_confirmed_delivery": true,
+      "status": "close",
+      "shipTo": {
+        "city": "Boulder",
+        "state": "CO",
+        "postalCode": "80302"
+      },
+      "tracking": {
+        "statusCode": "DE",
+        "estimatedDeliveryDate": "2026-04-12",
+        "actualDeliveryDate": "2026-04-12",
+        "events": [
+          {
+            "occurredAt": "2026-04-12T14:03:00",
+            "eventCode": "DE",
+            "description": "Delivered, front door",
+            "cityLocality": "Boulder",
+            "stateProvince": "CO"
+          },
+          {
+            "occurredAt": "2026-04-09T03:41:00",
+            "eventCode": "IT",
+            "description": "In transit to next facility",
+            "cityLocality": "Milwaukee",
+            "stateProvince": "WI"
+          },
+          {
+            "occurredAt": "2026-04-08T16:12:00",
+            "eventCode": "AC",
+            "description": "Accepted at USPS origin facility",
+            "cityLocality": "Oshkosh",
+            "stateProvince": "WI"
+          }
+        ]
+      }
+    },
+    {
+      "order_number": "SNS_104202",
+      "is_refill": true,
+      "shipDate": "2026-05-09",
+      "trackingNumber": "9405510290025518",
+      "pt_confirmed_delivery": true,
+      "status": "close",
+      "shipTo": {
+        "city": "Boulder",
+        "state": "CO",
+        "postalCode": "80302"
+      },
+      "tracking": {
+        "statusCode": "DE",
+        "estimatedDeliveryDate": "2026-05-13",
+        "actualDeliveryDate": "2026-05-13",
+        "events": [
+          {
+            "occurredAt": "2026-05-13T14:03:00",
+            "eventCode": "DE",
+            "description": "Delivered, front door",
+            "cityLocality": "Boulder",
+            "stateProvince": "CO"
+          },
+          {
+            "occurredAt": "2026-05-10T03:41:00",
+            "eventCode": "IT",
+            "description": "In transit to next facility",
+            "cityLocality": "Milwaukee",
+            "stateProvince": "WI"
+          },
+          {
+            "occurredAt": "2026-05-09T16:12:00",
+            "eventCode": "AC",
+            "description": "Accepted at USPS origin facility",
+            "cityLocality": "Oshkosh",
+            "stateProvince": "WI"
+          }
+        ]
+      }
+    },
+    {
+      "order_number": "SNS_104203",
+      "is_refill": true,
+      "shipDate": "2026-06-10",
+      "trackingNumber": "9405510290035518",
+      "pt_confirmed_delivery": true,
+      "status": "close",
+      "shipTo": {
+        "city": "Boulder",
+        "state": "CO",
+        "postalCode": "80302"
+      },
+      "tracking": {
+        "statusCode": "DE",
+        "estimatedDeliveryDate": "2026-06-14",
+        "actualDeliveryDate": "2026-06-14",
+        "events": [
+          {
+            "occurredAt": "2026-06-14T14:03:00",
+            "eventCode": "DE",
+            "description": "Delivered, front door",
+            "cityLocality": "Boulder",
+            "stateProvince": "CO"
+          },
+          {
+            "occurredAt": "2026-06-11T03:41:00",
+            "eventCode": "IT",
+            "description": "In transit to next facility",
+            "cityLocality": "Milwaukee",
+            "stateProvince": "WI"
+          },
+          {
+            "occurredAt": "2026-06-10T16:12:00",
+            "eventCode": "AC",
+            "description": "Accepted at USPS origin facility",
+            "cityLocality": "Oshkosh",
+            "stateProvince": "WI"
+          }
+        ]
+      }
+    },
+    {
+      "order_number": "SNS_104204",
+      "is_refill": true,
+      "shipDate": "2026-07-11",
+      "trackingNumber": "9405510290045518",
+      "pt_confirmed_delivery": true,
+      "status": "close",
+      "shipTo": {
+        "city": "Boulder",
+        "state": "CO",
+        "postalCode": "80302"
+      },
+      "tracking": {
+        "statusCode": "DE",
+        "estimatedDeliveryDate": "2026-07-15",
+        "actualDeliveryDate": "2026-07-15",
+        "events": [
+          {
+            "occurredAt": "2026-07-15T14:03:00",
+            "eventCode": "DE",
+            "description": "Delivered, front door",
+            "cityLocality": "Boulder",
+            "stateProvince": "CO"
+          },
+          {
+            "occurredAt": "2026-07-12T03:41:00",
+            "eventCode": "IT",
+            "description": "In transit to next facility",
+            "cityLocality": "Milwaukee",
+            "stateProvince": "WI"
+          },
+          {
+            "occurredAt": "2026-07-11T16:12:00",
+            "eventCode": "AC",
+            "description": "Accepted at USPS origin facility",
+            "cityLocality": "Oshkosh",
+            "stateProvince": "WI"
+          }
+        ]
+      }
+    },
+    {
+      "order_number": "SNS_104205",
+      "is_refill": true,
+      "shipDate": "2026-08-11",
+      "trackingNumber": "9405510290055518",
+      "pt_confirmed_delivery": false,
+      "status": "open",
+      "shipTo": {
+        "city": "Boulder",
+        "state": "CO",
+        "postalCode": "80302"
+      },
+      "tracking": {
+        "statusCode": "EX",
+        "estimatedDeliveryDate": "2026-08-15",
+        "actualDeliveryDate": null,
+        "events": [
+          {
+            "occurredAt": "2026-08-15T09:05:00",
+            "eventCode": "EX",
+            "description": "Delivery exception - package held at facility",
+            "cityLocality": "Boulder",
+            "stateProvince": "CO"
+          },
+          {
+            "occurredAt": "2026-08-14T11:20:00",
+            "eventCode": "AT",
+            "description": "Delivery attempted - no access to delivery location",
+            "cityLocality": "Boulder",
+            "stateProvince": "CO"
+          },
+          {
+            "occurredAt": "2026-08-12T03:41:00",
+            "eventCode": "IT",
+            "description": "In transit to next facility",
+            "cityLocality": "Milwaukee",
+            "stateProvince": "WI"
+          },
+          {
+            "occurredAt": "2026-08-11T16:12:00",
+            "eventCode": "AC",
+            "description": "Accepted at USPS origin facility",
+            "cityLocality": "Oshkosh",
+            "stateProvince": "WI"
+          }
+        ]
+      }
+    }
+  ]
+}

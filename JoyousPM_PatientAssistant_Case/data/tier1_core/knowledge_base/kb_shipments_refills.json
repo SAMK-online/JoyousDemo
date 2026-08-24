@@ -1,0 +1,12 @@
+{
+  "article_id": "kb_shipments_refills",
+  "title": "Shipments and refills",
+  "audience": "patient",
+  "updated_at": "2026-07-30",
+  "body": [
+    "Refills are sent on a recurring cycle as long as you have refills remaining on your current prescription and your subscription is active.",
+    "Prescriptions are written for a set number of shipments. When those run out, you'll need a follow-up visit with your provider before another prescription can be written.",
+    "You book follow-up visits yourself from your account. We'll remind you when one is due.",
+    "If a package is delayed, marked delivered but missing, or arrives damaged, tell us and we'll open a case and get a replacement moving."
+  ]
+}

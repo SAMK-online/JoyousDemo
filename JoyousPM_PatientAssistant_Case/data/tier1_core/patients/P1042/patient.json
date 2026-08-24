@@ -1,0 +1,36 @@
+{
+  "_note": "Synthetic data created for an interview exercise. Not real patients.",
+  "uid": "P1042",
+  "first_name": "Maya",
+  "status": "active",
+  "profile": {
+    "state": "CO",
+    "timezone": "America/Denver",
+    "created_at": "2026-02-24",
+    "commitment_type": "no-commitment"
+  },
+  "protocol": {
+    "dose": "45",
+    "strength": "60",
+    "maxdose": "90",
+    "start_date": "2026-03-14",
+    "doses_taken": "158",
+    "days_since_change": "129",
+    "discoverydone": "Yes",
+    "protocol": "Weekly",
+    "checkin": "Weekly",
+    "frbu_count": "0",
+    "split_dose": null,
+    "med_consent": true,
+    "initial_phq": "19",
+    "initial_gad": "15",
+    "latestphq": "6",
+    "latestgad": "5",
+    "current_suicidality": null,
+    "hold_prescription": false,
+    "troches": "6",
+    "datetrochecount": "2026-08-15",
+    "send_refill": true,
+    "send_refill_date": "2026-08-11"
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "_note": "Synthetic data created for an interview exercise. Not real patients.",
+  "uid": "P1266",
+  "cases": [
+    {
+      "case_id": "c_1266_treatment",
+      "case_type": "treatment",
+      "case_group": "treatment",
+      "status": "open",
+      "next_action": "nurse",
+      "opened_at": "2026-07-16",
+      "closed_at": null,
+      "checkins_count": 16,
+      "case_refs": {
+        "payment": "close",
+        "medication_order": "close",
+        "start_date": "close"
+      }
+    },
+    {
+      "case_id": "c_1266_intake",
+      "case_type": "intake",
+      "case_group": "patient_chart",
+      "status": "close",
+      "next_action": "patient",
+      "opened_at": "2026-07-09",
+      "closed_at": "2026-07-11",
+      "form_ref": "forms/intake_form.json"
+    },
+    {
+      "case_id": "c_1266_payment",
+      "case_type": "payment",
+      "case_group": "patient_chart",
+      "status": "close",
+      "next_action": null,
+      "opened_at": "2026-07-16",
+      "closed_at": "2026-07-16",
+      "source": "manual"
+    },
+    {
+      "case_id": "c_1266_startdate",
+      "case_type": "start_date",
+      "case_group": "patient_chart",
+      "status": "close",
+      "next_action": "patient",
+      "opened_at": "2026-07-28",
+      "closed_at": "2026-07-31",
+      "form_ref": "forms/start_date_form.json"
+    },
+    {
+      "case_id": "c_1266_discovery",
+      "case_type": "dose_discovery",
+      "case_group": "treatment",
+      "status": "open",
+      "next_action": "patient",
+      "opened_at": "2026-08-01",
+      "closed_at": null,
+      "current_dose": "30",
+      "total_doses_taken": 18,
+      "days_since_dose_change": 5
+    },
+    {
+      "case_id": "c_1266_checkin",
+      "case_type": "checkin",
+      "case_group": "treatment",
+      "status": "open",
+      "next_action": "patient",
+      "opened_at": "2026-08-01",
+      "closed_at": null,
+      "checkins_count": 16
+    },
+    {
+      "case_id": "c_1266_scores",
+      "case_type": "scores",
+      "case_group": "treatment",
+      "status": "open",
+      "next_action": null,
+      "opened_at": "2026-07-11",
+      "closed_at": null
+    },
+    {
+      "case_id": "c_1266_se_nausea",
+      "case_type": "side_effects",
+      "sub_type": "nausea",
+      "case_group": "side_effects",
+      "status": "open",
+      "next_action": "patient",
+      "opened_at": "2026-08-06",
+      "closed_at": null,
+      "severity": "moderate",
+      "se_resolved": null,
+      "dose_reduction": false,
+      "follow_ups": 2
+    },
+    {
+      "case_id": "c_1266_se_sleep",
+      "case_type": "side_effects",
+      "sub_type": "sleep",
+      "case_group": "side_effects",
+      "status": "open",
+      "next_action": "patient",
+      "opened_at": "2026-08-12",
+      "closed_at": null,
+      "severity": "moderate",
+      "se_resolved": null,
+      "dose_reduction": false,
+      "follow_ups": 1
+    },
+    {
+      "case_id": "c_1266_suicidality",
+      "case_type": "suicidality",
+      "case_group": "treatment",
+      "status": "open",
+      "next_action": "nurse",
+      "opened_at": "2026-08-17",
+      "closed_at": null,
+      "risk": "moderate",
+      "imminent_suicidality": false,
+      "follow_up_needed": true,
+      "safety_plan_done": false,
+      "safety_plan_pdf": null,
+      "details": [
+        {
+          "type": "checkin",
+          "CSSR-1": "yes",
+          "CSSR-S": "moderate",
+          "PHQ9": 2,
+          "reported_on": "2026-08-17"
+        }
+      ]
+    }
+  ]
+}

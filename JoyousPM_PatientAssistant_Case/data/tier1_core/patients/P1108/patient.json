@@ -1,0 +1,13 @@
+{
+  "_note": "Synthetic data created for an interview exercise. Not real patients.",
+  "uid": "P1108",
+  "first_name": "Devon",
+  "status": "not_approved",
+  "profile": {
+    "state": "TX",
+    "timezone": "America/Chicago",
+    "created_at": "2026-08-04",
+    "commitment_type": null
+  },
+  "protocol": null
+}

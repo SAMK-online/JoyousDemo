@@ -1,0 +1,68 @@
+{
+  "_note": "Synthetic data created for an interview exercise. Not real patients.",
+  "uid": "P1319",
+  "threads": [
+    {
+      "thread_id": "t_1319_a",
+      "opened_at": "2026-01-19T13:30:00",
+      "channel": "sms",
+      "status": "resolved",
+      "escalated_to": "care_team",
+      "tags": [
+        "cancellation",
+        "billing"
+      ],
+      "messages": [
+        {
+          "sent_at": "2026-01-19T13:30:00",
+          "from": "patient",
+          "text": "I need to cancel for now. Money is tight after the move and I can't justify it, even though it's been helping."
+        },
+        {
+          "sent_at": "2026-01-19T13:44:00",
+          "from": "ai_assistant",
+          "text": "I'm sorry to hear that, and I'm glad it's been helping. I've passed this to our Care Team to process."
+        },
+        {
+          "sent_at": "2026-01-20T10:05:00",
+          "from": "care_team",
+          "text": "Hi Tom, that's all taken care of - your subscription is cancelled from today and you won't be charged again. You're welcome back any time; just book a returning patient visit and we'll pick things up."
+        },
+        {
+          "sent_at": "2026-01-20T10:22:00",
+          "from": "patient",
+          "text": "thanks, appreciate it"
+        }
+      ]
+    },
+    {
+      "thread_id": "t_1319_b",
+      "opened_at": "2026-08-15T18:50:00",
+      "channel": "app_message",
+      "status": "open",
+      "escalated_to": "nurse_team",
+      "tags": [
+        "dose",
+        "returning_patient"
+      ],
+      "messages": [
+        {
+          "sent_at": "2026-08-15T18:50:00",
+          "from": "patient",
+          "text": "I've got a visit booked for the 24th. Last time I was on 60mg split into two and it worked well. Can I just start back there instead of doing the whole ramp up again? I still have a few troches left from before."
+        },
+        {
+          "sent_at": "2026-08-15T19:03:00",
+          "from": "ai_assistant",
+          "text": "Good to hear you're coming back. Dose decisions sit with your provider, so I've passed your question to our Nurse Team ahead of your visit."
+        },
+        {
+          "sent_at": "2026-08-18T09:12:00",
+          "from": "patient",
+          "text": "any word? just want to know what to expect"
+        }
+      ],
+      "unresolved_request": "Question about resuming prior dose, and mention of leftover medication from the previous episode. No clinical response yet, 4 days open. Visit is in 5 days."
+    }
+  ]
+}

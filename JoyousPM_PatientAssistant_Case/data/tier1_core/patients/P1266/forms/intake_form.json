@@ -1,0 +1,20 @@
+{
+  "_note": "Synthetic data created for an interview exercise. Not real patients.",
+  "flow_label": "intake",
+  "uid": "P1266",
+  "finalized": true,
+  "submitted_at": "2026-07-11",
+  "answers": {
+    "PHQ": 22,
+    "GAD": 18,
+    "DAST": 0,
+    "AUDIT": 4,
+    "PCL5_1": 2,
+    "nicotine": "no",
+    "BMI": 20.9,
+    "why_come_to_joyous": "Nothing has worked. I've tried four medications and eight years of therapy.",
+    "intentions_goals": "Want to stop feeling like this every single morning.",
+    "current_medications": "bupropion 300mg",
+    "medical_history": "no cardiac history; prior inpatient stay 2019"
+  }
+}

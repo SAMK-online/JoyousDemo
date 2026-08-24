@@ -1,0 +1,534 @@
+{
+  "_note": "Synthetic data created for an interview exercise. Not real patients.",
+  "uid": "P1319",
+  "cadence": "Weekly",
+  "checkins_count": 57,
+  "history": [
+    {
+      "date": "2025-09-10",
+      "type": "Daily checkin",
+      "form_id": "fs_3821712297",
+      "duration_mins": "3"
+    },
+    {
+      "date": "2025-09-11",
+      "type": "Daily checkin",
+      "form_id": "fs_5220830949",
+      "duration_mins": "2"
+    },
+    {
+      "date": "2025-09-12",
+      "type": "Daily checkin",
+      "form_id": "fs_3140257628",
+      "duration_mins": "4"
+    },
+    {
+      "date": "2025-09-13",
+      "type": "Daily checkin",
+      "form_id": "fs_6874578222",
+      "duration_mins": "5"
+    },
+    {
+      "date": "2025-09-14",
+      "type": "Daily checkin",
+      "form_id": "fs_8643512415",
+      "duration_mins": "3"
+    },
+    {
+      "date": "2025-09-15",
+      "type": "Daily checkin",
+      "form_id": "fs_0276511986",
+      "duration_mins": "3"
+    },
+    {
+      "date": "2025-09-16",
+      "type": "Daily checkin",
+      "form_id": "fs_7349495981",
+      "duration_mins": "3"
+    },
+    {
+      "date": "2025-09-17",
+      "type": "Daily checkin",
+      "form_id": "fs_7885370759",
+      "duration_mins": "2"
+    },
+    {
+      "date": "2025-09-18",
+      "type": "Daily checkin",
+      "form_id": "fs_8952239387",
+      "duration_mins": "3"
+    },
+    {
+      "date": "2025-09-19",
+      "type": "Daily checkin",
+      "form_id": "fs_1201374485",
+      "duration_mins": "4"
+    },
+    {
+      "date": "2025-09-20",
+      "type": "Daily checkin",
+      "form_id": "fs_2793662050",
+      "duration_mins": "5"
+    },
+    {
+      "date": "2025-09-21",
+      "type": "Daily checkin",
+      "form_id": "fs_0293664888",
+      "duration_mins": "3"
+    },
+    {
+      "date": "2025-09-22",
+      "type": "Daily checkin",
+      "form_id": "fs_7458486853",
+      "duration_mins": "5"
+    },
+    {
+      "date": "2025-09-23",
+      "type": "Daily checkin",
+      "form_id": "fs_3735697450",
+      "duration_mins": "5"
+    },
+    {
+      "date": "2025-09-24",
+      "type": "Daily checkin",
+      "form_id": "fs_9593074472",
+      "duration_mins": "3"
+    },
+    {
+      "date": "2025-09-25",
+      "type": "Daily checkin",
+      "form_id": "fs_9350585321",
+      "duration_mins": "3"
+    },
+    {
+      "date": "2025-09-26",
+      "type": "Daily checkin",
+      "form_id": "fs_9774617514",
+      "duration_mins": "5"
+    },
+    {
+      "date": "2025-09-27",
+      "type": "Daily checkin",
+      "form_id": "fs_2050561604",
+      "duration_mins": "5"
+    },
+    {
+      "date": "2025-09-28",
+      "type": "Daily checkin",
+      "form_id": "fs_7162669008",
+      "duration_mins": "2"
+    },
+    {
+      "date": "2025-09-29",
+      "type": "Daily checkin",
+      "form_id": "fs_6539293968",
+      "duration_mins": "4"
+    },
+    {
+      "date": "2025-09-30",
+      "type": "Daily checkin",
+      "form_id": "fs_7464540825",
+      "duration_mins": "5"
+    },
+    {
+      "date": "2025-10-01",
+      "type": "Daily checkin",
+      "form_id": "fs_0202554349",
+      "duration_mins": "4"
+    },
+    {
+      "date": "2025-10-02",
+      "type": "Daily checkin",
+      "form_id": "fs_5589964227",
+      "duration_mins": "4"
+    },
+    {
+      "date": "2025-10-03",
+      "type": "Daily checkin",
+      "form_id": "fs_3994937141",
+      "duration_mins": "4"
+    },
+    {
+      "date": "2025-10-04",
+      "type": "Daily checkin",
+      "form_id": "fs_4849111775",
+      "duration_mins": "4"
+    },
+    {
+      "date": "2025-10-05",
+      "type": "Daily checkin",
+      "form_id": "fs_9522387843",
+      "duration_mins": "2"
+    },
+    {
+      "date": "2025-10-06",
+      "type": "Daily checkin",
+      "form_id": "fs_1449748898",
+      "duration_mins": "4"
+    },
+    {
+      "date": "2025-10-07",
+      "type": "Daily checkin",
+      "form_id": "fs_3620259049",
+      "duration_mins": "4"
+    },
+    {
+      "date": "2025-10-08",
+      "type": "Daily checkin",
+      "form_id": "fs_9629878378",
+      "duration_mins": "2"
+    },
+    {
+      "date": "2025-10-09",
+      "type": "Daily checkin",
+      "form_id": "fs_5875472130",
+      "duration_mins": "3"
+    },
+    {
+      "date": "2025-10-10",
+      "type": "Daily checkin",
+      "form_id": "fs_1179595114",
+      "duration_mins": "2"
+    },
+    {
+      "date": "2025-10-11",
+      "type": "Daily checkin",
+      "form_id": "fs_3866157129",
+      "duration_mins": "3"
+    },
+    {
+      "date": "2025-10-12",
+      "type": "Daily checkin",
+      "form_id": "fs_7438635667",
+      "duration_mins": "4"
+    },
+    {
+      "date": "2025-10-13",
+      "type": "Daily checkin",
+      "form_id": "fs_3630553679",
+      "duration_mins": "3"
+    },
+    {
+      "date": "2025-10-14",
+      "type": "Daily checkin",
+      "form_id": "fs_4484347899",
+      "duration_mins": "2"
+    },
+    {
+      "date": "2025-10-15",
+      "type": "Daily checkin",
+      "form_id": "fs_2820445707",
+      "duration_mins": "3"
+    },
+    {
+      "date": "2025-10-16",
+      "type": "Daily checkin",
+      "form_id": "fs_9488982659",
+      "duration_mins": "5"
+    },
+    {
+      "date": "2025-10-17",
+      "type": "Daily checkin",
+      "form_id": "fs_4404500241",
+      "duration_mins": "2"
+    },
+    {
+      "date": "2025-10-18",
+      "type": "Daily checkin",
+      "form_id": "fs_2416333555",
+      "duration_mins": "2"
+    },
+    {
+      "date": "2025-10-19",
+      "type": "Daily checkin",
+      "form_id": "fs_9222029624",
+      "duration_mins": "2"
+    },
+    {
+      "date": "2025-10-20",
+      "type": "Daily checkin",
+      "form_id": "fs_7085433759",
+      "duration_mins": "5"
+    },
+    {
+      "date": "2025-10-21",
+      "type": "Daily checkin",
+      "form_id": "fs_5665361542",
+      "duration_mins": "3"
+    },
+    {
+      "date": "2025-10-22",
+      "type": "Daily checkin",
+      "form_id": "fs_3862113250",
+      "duration_mins": "5"
+    },
+    {
+      "date": "2025-10-23",
+      "type": "Daily checkin",
+      "form_id": "fs_4732570488",
+      "duration_mins": "2"
+    },
+    {
+      "date": "2025-10-24",
+      "type": "Weekly checkin",
+      "form_id": "fs_7103879087",
+      "duration_mins": "3"
+    },
+    {
+      "date": "2025-10-31",
+      "type": "Weekly checkin",
+      "form_id": "fs_3090993193",
+      "duration_mins": "5"
+    },
+    {
+      "date": "2025-11-07",
+      "type": "Weekly checkin",
+      "form_id": "fs_6934992191",
+      "duration_mins": "2"
+    },
+    {
+      "date": "2025-11-14",
+      "type": "Weekly checkin",
+      "form_id": "fs_7536373164",
+      "duration_mins": "2"
+    },
+    {
+      "date": "2025-11-21",
+      "type": "Weekly checkin",
+      "form_id": "fs_7292148336",
+      "duration_mins": "3"
+    },
+    {
+      "date": "2025-11-28",
+      "type": "Weekly checkin",
+      "form_id": "fs_6662008408",
+      "duration_mins": "5"
+    },
+    {
+      "date": "2025-12-05",
+      "type": "Weekly checkin",
+      "form_id": "fs_3518962835",
+      "duration_mins": "4"
+    },
+    {
+      "date": "2025-12-12",
+      "type": "Weekly checkin",
+      "form_id": "fs_5420779123",
+      "duration_mins": "3"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "Weekly checkin",
+      "form_id": "fs_1021679651",
+      "duration_mins": "3"
+    },
+    {
+      "date": "2025-12-26",
+      "type": "Weekly checkin",
+      "form_id": "fs_4635901408",
+      "duration_mins": "3"
+    },
+    {
+      "date": "2026-01-02",
+      "type": "Weekly checkin",
+      "form_id": "fs_5160654733",
+      "duration_mins": "5"
+    },
+    {
+      "date": "2026-01-09",
+      "type": "Weekly checkin",
+      "form_id": "fs_2257659614",
+      "duration_mins": "3"
+    },
+    {
+      "date": "2026-01-16",
+      "type": "Weekly checkin",
+      "form_id": "fs_0258240850",
+      "duration_mins": "4"
+    }
+  ],
+  "scores": {
+    "phq": [
+      {
+        "value": 17,
+        "source": "intake",
+        "reported_on": "2025-08-30"
+      },
+      {
+        "value": 17,
+        "source": "weekly",
+        "reported_on": "2025-09-09"
+      },
+      {
+        "value": 17,
+        "source": "weekly",
+        "reported_on": "2025-09-19"
+      },
+      {
+        "value": 15,
+        "source": "weekly",
+        "reported_on": "2025-09-29"
+      },
+      {
+        "value": 14,
+        "source": "weekly",
+        "reported_on": "2025-10-09"
+      },
+      {
+        "value": 12,
+        "source": "weekly",
+        "reported_on": "2025-10-19"
+      },
+      {
+        "value": 11,
+        "source": "weekly",
+        "reported_on": "2025-10-29"
+      },
+      {
+        "value": 11,
+        "source": "weekly",
+        "reported_on": "2025-11-08"
+      },
+      {
+        "value": 10,
+        "source": "weekly",
+        "reported_on": "2025-11-18"
+      },
+      {
+        "value": 11,
+        "source": "weekly",
+        "reported_on": "2025-11-28"
+      },
+      {
+        "value": 8,
+        "source": "weekly",
+        "reported_on": "2025-12-08"
+      },
+      {
+        "value": 7,
+        "source": "weekly",
+        "reported_on": "2025-12-18"
+      },
+      {
+        "value": 9,
+        "source": "weekly",
+        "reported_on": "2025-12-28"
+      },
+      {
+        "value": 7,
+        "source": "weekly",
+        "reported_on": "2026-01-07"
+      }
+    ],
+    "gad": [
+      {
+        "value": 12,
+        "source": "intake",
+        "reported_on": "2025-08-30"
+      },
+      {
+        "value": 12,
+        "source": "weekly",
+        "reported_on": "2025-09-09"
+      },
+      {
+        "value": 10,
+        "source": "weekly",
+        "reported_on": "2025-09-19"
+      },
+      {
+        "value": 11,
+        "source": "weekly",
+        "reported_on": "2025-09-29"
+      },
+      {
+        "value": 11,
+        "source": "weekly",
+        "reported_on": "2025-10-09"
+      },
+      {
+        "value": 11,
+        "source": "weekly",
+        "reported_on": "2025-10-19"
+      },
+      {
+        "value": 10,
+        "source": "weekly",
+        "reported_on": "2025-10-29"
+      },
+      {
+        "value": 8,
+        "source": "weekly",
+        "reported_on": "2025-11-08"
+      },
+      {
+        "value": 8,
+        "source": "weekly",
+        "reported_on": "2025-11-18"
+      },
+      {
+        "value": 7,
+        "source": "weekly",
+        "reported_on": "2025-11-28"
+      },
+      {
+        "value": 8,
+        "source": "weekly",
+        "reported_on": "2025-12-08"
+      },
+      {
+        "value": 7,
+        "source": "weekly",
+        "reported_on": "2025-12-18"
+      },
+      {
+        "value": 7,
+        "source": "weekly",
+        "reported_on": "2025-12-28"
+      },
+      {
+        "value": 6,
+        "source": "weekly",
+        "reported_on": "2026-01-07"
+      }
+    ],
+    "cssr": [
+      {
+        "value": "assessment not triggered",
+        "source": "intake",
+        "reported_on": "2025-08-30"
+      }
+    ]
+  },
+  "recent_dose_feedback": [
+    {
+      "date_reported": "2026-01-18",
+      "type": "Weekly",
+      "dose_pt_reported_taking": "60",
+      "dose_recommended": "60",
+      "troche_strength": "100",
+      "dose_feels_right": "yes",
+      "side_effects": [],
+      "notices_improvement": "yes",
+      "split_dose": "yes"
+    }
+  ],
+  "dose_changelog": [
+    {
+      "change": "increase",
+      "from_dose": "25",
+      "to_dose": "50",
+      "date": "2025-09-28",
+      "initiator": "protocol",
+      "reason": "Protocol titration"
+    },
+    {
+      "change": "increase",
+      "from_dose": "50",
+      "to_dose": "60",
+      "date": "2025-10-20",
+      "initiator": "provider",
+      "reason": "Provider adjustment at follow-up"
+    }
+  ]
+}

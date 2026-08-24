@@ -1,0 +1,132 @@
+{
+  "_note": "Synthetic data created for an interview exercise. Not real patients.",
+  "uid": "P1042",
+  "cases": [
+    {
+      "case_id": "c_1042_treatment",
+      "case_type": "treatment",
+      "case_group": "treatment",
+      "status": "open",
+      "next_action": "patient",
+      "opened_at": "2026-03-02",
+      "closed_at": null,
+      "checkins_count": 59,
+      "case_refs": {
+        "payment": "close",
+        "medication_order": "open",
+        "start_date": "close"
+      }
+    },
+    {
+      "case_id": "c_1042_intake",
+      "case_type": "intake",
+      "case_group": "patient_chart",
+      "status": "close",
+      "next_action": "patient",
+      "opened_at": "2026-02-24",
+      "closed_at": "2026-02-26",
+      "form_ref": "forms/intake_form.json"
+    },
+    {
+      "case_id": "c_1042_payment",
+      "case_type": "payment",
+      "case_group": "patient_chart",
+      "status": "close",
+      "next_action": "patient",
+      "opened_at": "2026-03-02",
+      "closed_at": "2026-03-03",
+      "source": "manual"
+    },
+    {
+      "case_id": "c_1042_startdate",
+      "case_type": "start_date",
+      "case_group": "patient_chart",
+      "status": "close",
+      "next_action": "patient",
+      "opened_at": "2026-03-11",
+      "closed_at": "2026-03-13",
+      "form_ref": "forms/start_date_form.json"
+    },
+    {
+      "case_id": "c_1042_discovery",
+      "case_type": "dose_discovery",
+      "case_group": "treatment",
+      "status": "close",
+      "next_action": "patient",
+      "opened_at": "2026-03-14",
+      "closed_at": "2026-04-26",
+      "total_doses_taken": 43
+    },
+    {
+      "case_id": "c_1042_maintenance",
+      "case_type": "dose_maintenance",
+      "case_group": "treatment",
+      "status": "open",
+      "next_action": "patient",
+      "opened_at": "2026-04-26",
+      "closed_at": null,
+      "current_dose": "45",
+      "update_checkin_frequency": true
+    },
+    {
+      "case_id": "c_1042_checkin",
+      "case_type": "checkin",
+      "case_group": "treatment",
+      "status": "open",
+      "next_action": "patient",
+      "opened_at": "2026-03-14",
+      "closed_at": null,
+      "checkins_count": 59
+    },
+    {
+      "case_id": "c_1042_scores",
+      "case_type": "scores",
+      "case_group": "treatment",
+      "status": "open",
+      "next_action": null,
+      "opened_at": "2026-02-26",
+      "closed_at": null
+    },
+    {
+      "case_id": "c_1042_se_nausea",
+      "case_type": "side_effects",
+      "sub_type": "nausea",
+      "case_group": "side_effects",
+      "status": "close",
+      "next_action": "patient",
+      "opened_at": "2026-03-22",
+      "closed_at": "2026-04-05",
+      "se_resolved": "no_the_issue_has_been_resolved",
+      "severity": "mild"
+    },
+    {
+      "case_id": "c_1042_refill",
+      "case_type": "refill",
+      "case_group": "treatment",
+      "status": "open",
+      "next_action": "patient",
+      "opened_at": "2026-08-11",
+      "closed_at": null,
+      "check_list": {
+        "active_subscription": true,
+        "valid_prescription": true,
+        "refills_remaining": 0,
+        "days_since_last_shipment": 8
+      },
+      "is_eligible": false,
+      "is_consent_needed": false,
+      "is_shipment_confirmation_needed": true
+    },
+    {
+      "case_id": "c_1042_order_6",
+      "case_type": "medication_order",
+      "case_group": "appointment_task",
+      "status": "open",
+      "next_action": "patient",
+      "opened_at": "2026-08-11",
+      "closed_at": null,
+      "is_refill": true,
+      "pt_confirmed_delivery": false
+    }
+  ]
+}

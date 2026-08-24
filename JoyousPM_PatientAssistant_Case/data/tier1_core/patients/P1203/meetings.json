@@ -1,0 +1,31 @@
+{
+  "_note": "Synthetic data created for an interview exercise. Not real patients.",
+  "uid": "P1203",
+  "meetings": [
+    {
+      "meeting_id": "m_1203_nm",
+      "type": "NM",
+      "status": "Hold",
+      "custom_status": "Hold",
+      "is_hhh": true,
+      "scheduled_at": "2026-07-27T09:30:00",
+      "duration": 30,
+      "provider": "K. Alvarez, PMHNP-BC",
+      "assigned_nurse": "T. Okafor, RN",
+      "icd10_codes": [
+        "F41.1"
+      ],
+      "billing_status": "",
+      "audit_status": "completed",
+      "prescription": null,
+      "status_transitions": [
+        {
+          "datetime": "2026-07-27T10:06:00",
+          "from_status": "Confirmed",
+          "to_status": "Hold"
+        }
+      ],
+      "note_ref": "visit_notes.json#vn_1203_nm"
+    }
+  ]
+}

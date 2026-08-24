@@ -1,0 +1,81 @@
+{
+  "_note": "Synthetic data created for an interview exercise. Not real patients.",
+  "uid": "P1203",
+  "notes": [
+    {
+      "note_id": "vn_1203_nm",
+      "meeting_id": "m_1203_nm",
+      "date": "2026-07-27",
+      "meeting_type": "NM",
+      "participants": [
+        "T. Okafor, RN",
+        "K. Alvarez, PMHNP-BC",
+        "Patient"
+      ],
+      "transcript": [
+        {
+          "speaker": "Nurse",
+          "text": "Hi Ruth. Tell me a little about what's going on."
+        },
+        {
+          "speaker": "Patient",
+          "text": "My husband died in March. Forty-one years. Since then I can't settle - there's a knot in my chest from the moment I wake up."
+        },
+        {
+          "speaker": "Nurse",
+          "text": "I'm so sorry. Are you sleeping?"
+        },
+        {
+          "speaker": "Patient",
+          "text": "Three or four hours. I wake at two and that's that."
+        },
+        {
+          "speaker": "Nurse",
+          "text": "Any thoughts of hurting yourself?"
+        },
+        {
+          "speaker": "Patient",
+          "text": "No. I want to feel better, not disappear."
+        },
+        {
+          "speaker": "Nurse",
+          "text": "Any heart conditions or blood pressure problems?"
+        },
+        {
+          "speaker": "Patient",
+          "text": "Blood pressure was fine at my physical in May."
+        },
+        {
+          "speaker": "Provider",
+          "text": "Ruth, hi, I'm Kara. Your anxiety score is 17, depression 16. Given what you've been through, that makes sense, and I do think this could help you."
+        },
+        {
+          "speaker": "Patient",
+          "text": "That's a relief."
+        },
+        {
+          "speaker": "Provider",
+          "text": "There's one snag. The identification on your account doesn't match the name you've given me - I think you may have signed up under a maiden name or a shortened name."
+        },
+        {
+          "speaker": "Patient",
+          "text": "Oh - the account might be in my husband's name. He set up all our online things."
+        },
+        {
+          "speaker": "Provider",
+          "text": "That would explain it. I can't write a prescription until I've verified who I'm prescribing for. If you can send us a photo of a government ID, I'll approve it the same day."
+        },
+        {
+          "speaker": "Patient",
+          "text": "I'll ask my daughter to help me with that."
+        },
+        {
+          "speaker": "Provider",
+          "text": "[note to file] Clinically appropriate, approving on receipt of ID. Recently bereaved, low technical confidence, mentioned her daughter handles her computer. If the ID doesn't arrive within a few days someone should call her rather than keep texting a link."
+        }
+      ],
+      "clinical_summary": "68F, bereavement-related anxiety and insomnia following spousal death March 2026. GAD 17 / PHQ 16. No SI. No cardiac history. Clinically appropriate for treatment.",
+      "plan": "HOLD pending government photo ID - account identity does not match patient. Approve and prescribe on receipt. Patient has limited technical confidence; telephone follow-up preferred if ID not received promptly."
+    }
+  ]
+}

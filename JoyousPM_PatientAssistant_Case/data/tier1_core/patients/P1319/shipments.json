@@ -1,0 +1,170 @@
+{
+  "_note": "Synthetic data created for an interview exercise. Not real patients.",
+  "uid": "P1319",
+  "orders": [
+    {
+      "order_number": "SNS_131900",
+      "is_refill": false,
+      "shipDate": "2025-09-04",
+      "trackingNumber": "9405510371009921",
+      "pt_confirmed_delivery": true,
+      "status": "close",
+      "shipTo": {
+        "city": "Durham",
+        "state": "NC",
+        "postalCode": "27701"
+      },
+      "tracking": {
+        "statusCode": "DE",
+        "estimatedDeliveryDate": "2025-09-08",
+        "actualDeliveryDate": "2025-09-08",
+        "events": [
+          {
+            "occurredAt": "2025-09-08T14:03:00",
+            "eventCode": "DE",
+            "description": "Delivered, front door",
+            "cityLocality": "Boulder",
+            "stateProvince": "CO"
+          },
+          {
+            "occurredAt": "2025-09-05T03:41:00",
+            "eventCode": "IT",
+            "description": "In transit to next facility",
+            "cityLocality": "Milwaukee",
+            "stateProvince": "WI"
+          },
+          {
+            "occurredAt": "2025-09-04T16:12:00",
+            "eventCode": "AC",
+            "description": "Accepted at USPS origin facility",
+            "cityLocality": "Oshkosh",
+            "stateProvince": "WI"
+          }
+        ]
+      }
+    },
+    {
+      "order_number": "SNS_131901",
+      "is_refill": true,
+      "shipDate": "2025-10-06",
+      "trackingNumber": "9405510371019921",
+      "pt_confirmed_delivery": true,
+      "status": "close",
+      "shipTo": {
+        "city": "Durham",
+        "state": "NC",
+        "postalCode": "27701"
+      },
+      "tracking": {
+        "statusCode": "DE",
+        "estimatedDeliveryDate": "2025-10-10",
+        "actualDeliveryDate": "2025-10-10",
+        "events": [
+          {
+            "occurredAt": "2025-10-10T14:03:00",
+            "eventCode": "DE",
+            "description": "Delivered, front door",
+            "cityLocality": "Boulder",
+            "stateProvince": "CO"
+          },
+          {
+            "occurredAt": "2025-10-07T03:41:00",
+            "eventCode": "IT",
+            "description": "In transit to next facility",
+            "cityLocality": "Milwaukee",
+            "stateProvince": "WI"
+          },
+          {
+            "occurredAt": "2025-10-06T16:12:00",
+            "eventCode": "AC",
+            "description": "Accepted at USPS origin facility",
+            "cityLocality": "Oshkosh",
+            "stateProvince": "WI"
+          }
+        ]
+      }
+    },
+    {
+      "order_number": "SNS_131902",
+      "is_refill": true,
+      "shipDate": "2025-11-14",
+      "trackingNumber": "9405510371029921",
+      "pt_confirmed_delivery": true,
+      "status": "close",
+      "shipTo": {
+        "city": "Durham",
+        "state": "NC",
+        "postalCode": "27701"
+      },
+      "tracking": {
+        "statusCode": "DE",
+        "estimatedDeliveryDate": "2025-11-18",
+        "actualDeliveryDate": "2025-11-18",
+        "events": [
+          {
+            "occurredAt": "2025-11-18T14:03:00",
+            "eventCode": "DE",
+            "description": "Delivered, front door",
+            "cityLocality": "Boulder",
+            "stateProvince": "CO"
+          },
+          {
+            "occurredAt": "2025-11-15T03:41:00",
+            "eventCode": "IT",
+            "description": "In transit to next facility",
+            "cityLocality": "Milwaukee",
+            "stateProvince": "WI"
+          },
+          {
+            "occurredAt": "2025-11-14T16:12:00",
+            "eventCode": "AC",
+            "description": "Accepted at USPS origin facility",
+            "cityLocality": "Oshkosh",
+            "stateProvince": "WI"
+          }
+        ]
+      }
+    },
+    {
+      "order_number": "SNS_131903",
+      "is_refill": true,
+      "shipDate": "2025-12-15",
+      "trackingNumber": "9405510371039921",
+      "pt_confirmed_delivery": true,
+      "status": "close",
+      "shipTo": {
+        "city": "Durham",
+        "state": "NC",
+        "postalCode": "27701"
+      },
+      "tracking": {
+        "statusCode": "DE",
+        "estimatedDeliveryDate": "2025-12-19",
+        "actualDeliveryDate": "2025-12-19",
+        "events": [
+          {
+            "occurredAt": "2025-12-19T14:03:00",
+            "eventCode": "DE",
+            "description": "Delivered, front door",
+            "cityLocality": "Boulder",
+            "stateProvince": "CO"
+          },
+          {
+            "occurredAt": "2025-12-16T03:41:00",
+            "eventCode": "IT",
+            "description": "In transit to next facility",
+            "cityLocality": "Milwaukee",
+            "stateProvince": "WI"
+          },
+          {
+            "occurredAt": "2025-12-15T16:12:00",
+            "eventCode": "AC",
+            "description": "Accepted at USPS origin facility",
+            "cityLocality": "Oshkosh",
+            "stateProvince": "WI"
+          }
+        ]
+      }
+    }
+  ]
+}

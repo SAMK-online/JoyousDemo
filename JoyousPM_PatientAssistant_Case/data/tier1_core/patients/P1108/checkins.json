@@ -1,0 +1,30 @@
+{
+  "_note": "Synthetic data created for an interview exercise. Not real patients.",
+  "uid": "P1108",
+  "cadence": null,
+  "checkins_count": 0,
+  "history": [],
+  "scores": {
+    "phq": [
+      {
+        "value": 6,
+        "source": "intake",
+        "reported_on": "2026-08-05"
+      }
+    ],
+    "gad": [
+      {
+        "value": 5,
+        "source": "intake",
+        "reported_on": "2026-08-05"
+      }
+    ],
+    "cssr": [
+      {
+        "value": "assessment not triggered",
+        "source": "intake",
+        "reported_on": "2026-08-05"
+      }
+    ]
+  }
+}

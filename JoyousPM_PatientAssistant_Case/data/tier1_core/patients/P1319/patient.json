@@ -1,0 +1,33 @@
+{
+  "_note": "Synthetic data created for an interview exercise. Not real patients.",
+  "uid": "P1319",
+  "first_name": "Tom",
+  "status": "churned",
+  "profile": {
+    "state": "NC",
+    "timezone": "America/New_York",
+    "created_at": "2025-08-28",
+    "commitment_type": "no-commitment"
+  },
+  "protocol": {
+    "dose": "60",
+    "strength": "100",
+    "maxdose": "100",
+    "start_date": "2025-09-10",
+    "doses_taken": "134",
+    "days_since_change": "94",
+    "discoverydone": "Yes",
+    "protocol": "Weekly",
+    "checkin": "Weekly",
+    "frbu_count": "0",
+    "split_dose": "yes",
+    "med_consent": true,
+    "initial_phq": "17",
+    "initial_gad": "12",
+    "latestphq": "7",
+    "latestgad": "6",
+    "current_suicidality": null,
+    "hold_prescription": false,
+    "stopdate": "2026-01-22"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "_note": "Synthetic data created for an interview exercise. Not real patients.",
+  "uid": "P1266",
+  "meetings": [
+    {
+      "meeting_id": "m_1266_nm",
+      "type": "NM",
+      "status": "Approved",
+      "custom_status": "Approved",
+      "is_hhh": false,
+      "scheduled_at": "2026-07-15T10:00:00",
+      "duration": 30,
+      "provider": "R. Whitfield, FNP-C",
+      "assigned_nurse": "S. Mbeki, RN",
+      "icd10_codes": [
+        "F33.2",
+        "F41.1"
+      ],
+      "billing_status": "",
+      "audit_status": "completed",
+      "prescription": {
+        "strength": 60,
+        "type_of_prescription": "60_ts",
+        "number_of_refills": 0,
+        "confirmation": true
+      },
+      "note_ref": "visit_notes.json#vn_1266_nm"
+    },
+    {
+      "meeting_id": "m_1266_fu1",
+      "type": "FU",
+      "status": "Not Confirmed",
+      "custom_status": null,
+      "is_hhh": false,
+      "scheduled_at": "2026-08-26T14:30:00",
+      "duration": 15,
+      "provider": "R. Whitfield, FNP-C",
+      "assigned_nurse": null,
+      "icd10_codes": [],
+      "billing_status": "",
+      "audit_status": null,
+      "prescription": null,
+      "note_ref": null
+    }
+  ]
+}

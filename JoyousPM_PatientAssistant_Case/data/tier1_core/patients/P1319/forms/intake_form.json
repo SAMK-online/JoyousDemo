@@ -1,0 +1,20 @@
+{
+  "_note": "Synthetic data created for an interview exercise. Not real patients.",
+  "flow_label": "intake",
+  "uid": "P1319",
+  "finalized": true,
+  "submitted_at": "2025-08-30",
+  "answers": {
+    "PHQ": 17,
+    "GAD": 12,
+    "DAST": 0,
+    "AUDIT": 6,
+    "PCL5_1": 0,
+    "nicotine": "no",
+    "BMI": 29.4,
+    "why_come_to_joyous": "Low mood since a layoff, not sleeping.",
+    "intentions_goals": "Get back to running and be less irritable with my wife.",
+    "current_medications": "none",
+    "medical_history": "hypertension, controlled on lisinopril"
+  }
+}

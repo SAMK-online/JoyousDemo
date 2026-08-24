@@ -1,0 +1,13 @@
+{
+  "_note": "Synthetic data created for an interview exercise. Not real patients.",
+  "uid": "P1203",
+  "first_name": "Ruth",
+  "status": "onboarding",
+  "profile": {
+    "state": "MI",
+    "timezone": "America/Detroit",
+    "created_at": "2026-07-20",
+    "commitment_type": "3-month"
+  },
+  "protocol": null
+}

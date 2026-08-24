@@ -1,0 +1,118 @@
+{
+  "_note": "Synthetic data created for an interview exercise. Not real patients.",
+  "uid": "P1042",
+  "threads": [
+    {
+      "thread_id": "t_1042_a",
+      "opened_at": "2026-05-19T08:12:00",
+      "channel": "sms",
+      "status": "resolved",
+      "escalated_to": null,
+      "tags": [
+        "treatment_faq"
+      ],
+      "messages": [
+        {
+          "sent_at": "2026-05-19T08:12:00",
+          "from": "patient",
+          "text": "Is it normal to feel like it stopped working as well? Last couple weeks feel flatter."
+        },
+        {
+          "sent_at": "2026-05-19T08:31:00",
+          "from": "ai_assistant",
+          "text": "That's a common thing to notice, and worth keeping an eye on. Your check-in answers go straight to your care team and they use them to decide whether your dose needs adjusting. Keep filling them in and flag it again if it continues."
+        },
+        {
+          "sent_at": "2026-05-19T08:40:00",
+          "from": "patient",
+          "text": "ok thanks"
+        }
+      ]
+    },
+    {
+      "thread_id": "t_1042_b",
+      "opened_at": "2026-07-28T17:44:00",
+      "channel": "sms",
+      "status": "resolved",
+      "escalated_to": null,
+      "tags": [
+        "shipping",
+        "refill"
+      ],
+      "messages": [
+        {
+          "sent_at": "2026-07-28T17:44:00",
+          "from": "patient",
+          "text": "When does my next refill come? I want to make sure I don't run out before we travel."
+        },
+        {
+          "sent_at": "2026-07-28T17:52:00",
+          "from": "ai_assistant",
+          "text": "Your refills go out on a recurring cycle, roughly every 30 days, as long as your subscription is active and you have refills left on your prescription. Your last one shipped on 11 July, so the next should be on its way in early August."
+        },
+        {
+          "sent_at": "2026-07-28T18:02:00",
+          "from": "patient",
+          "text": "perfect, thank you"
+        }
+      ]
+    },
+    {
+      "thread_id": "t_1042_c",
+      "opened_at": "2026-08-16T09:05:00",
+      "channel": "app_message",
+      "status": "open",
+      "escalated_to": "care_team",
+      "tags": [
+        "shipping",
+        "problem_shipment"
+      ],
+      "messages": [
+        {
+          "sent_at": "2026-08-16T09:05:00",
+          "from": "patient",
+          "text": "USPS says they attempted delivery on the 14th but nobody came and there was no note. Now it says held at facility. I've got 6 troches left."
+        },
+        {
+          "sent_at": "2026-08-16T09:19:00",
+          "from": "ai_assistant",
+          "text": "I'm sorry, that's frustrating. I've passed this to our Care Team with your tracking number so they can chase it with the carrier."
+        },
+        {
+          "sent_at": "2026-08-17T11:40:00",
+          "from": "care_team",
+          "text": "Hi Maya, thanks for flagging. We've opened a case with the carrier and we'll update you as soon as we hear back."
+        },
+        {
+          "sent_at": "2026-08-19T07:15:00",
+          "from": "patient",
+          "text": "Any news? I'm going to run out in a few days."
+        }
+      ],
+      "unresolved_request": "Package held at carrier facility since 15 Aug; replacement not yet arranged; patient running low."
+    },
+    {
+      "thread_id": "t_1042_outbound",
+      "opened_at": "2026-08-05T09:00:00",
+      "channel": "sms",
+      "status": "no_reply",
+      "escalated_to": null,
+      "tags": [
+        "automated",
+        "appointment"
+      ],
+      "messages": [
+        {
+          "sent_at": "2026-08-05T09:00:00",
+          "from": "system_automated",
+          "text": "Hi Maya - it's time to book your next visit with your provider. You can pick a time here: joyous.team/book"
+        },
+        {
+          "sent_at": "2026-08-12T09:00:00",
+          "from": "system_automated",
+          "text": "Hi Maya - a reminder to book your next provider visit: joyous.team/book"
+        }
+      ]
+    }
+  ]
+}

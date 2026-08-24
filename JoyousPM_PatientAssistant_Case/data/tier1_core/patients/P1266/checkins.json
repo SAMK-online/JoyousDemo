@@ -1,0 +1,240 @@
+{
+  "_note": "Synthetic data created for an interview exercise. Not real patients.",
+  "uid": "P1266",
+  "cadence": "Daily",
+  "checkins_count": 16,
+  "history": [
+    {
+      "date": "2026-08-01",
+      "type": "Daily checkin",
+      "form_id": "fs_7332153701",
+      "duration_mins": "4"
+    },
+    {
+      "date": "2026-08-02",
+      "type": "Daily checkin",
+      "form_id": "fs_6524324878",
+      "duration_mins": "5"
+    },
+    {
+      "date": "2026-08-03",
+      "type": "Daily checkin",
+      "form_id": "fs_1175054236",
+      "duration_mins": "3"
+    },
+    {
+      "date": "2026-08-04",
+      "type": "Daily checkin",
+      "form_id": "fs_7321331468",
+      "duration_mins": "3"
+    },
+    {
+      "date": "2026-08-05",
+      "type": "Daily checkin",
+      "form_id": "fs_2704869745",
+      "duration_mins": "4"
+    },
+    {
+      "date": "2026-08-06",
+      "type": "Daily checkin",
+      "form_id": "fs_4496378821",
+      "duration_mins": "5"
+    },
+    {
+      "date": "2026-08-07",
+      "type": "Daily checkin",
+      "form_id": "fs_8628547474",
+      "duration_mins": "3"
+    },
+    {
+      "date": "2026-08-08",
+      "type": "Daily checkin",
+      "form_id": "fs_3182660260",
+      "duration_mins": "4"
+    },
+    {
+      "date": "2026-08-09",
+      "type": "Daily checkin",
+      "form_id": "fs_9282141994",
+      "duration_mins": "3"
+    },
+    {
+      "date": "2026-08-11",
+      "type": "Daily checkin",
+      "form_id": "fs_9900035953",
+      "duration_mins": "4"
+    },
+    {
+      "date": "2026-08-12",
+      "type": "Daily checkin",
+      "form_id": "fs_5819649938",
+      "duration_mins": "3"
+    },
+    {
+      "date": "2026-08-13",
+      "type": "Daily checkin",
+      "form_id": "fs_6512776344",
+      "duration_mins": "3"
+    },
+    {
+      "date": "2026-08-14",
+      "type": "Daily checkin",
+      "form_id": "fs_6979840299",
+      "duration_mins": "2"
+    },
+    {
+      "date": "2026-08-16",
+      "type": "Daily checkin",
+      "form_id": "fs_3587755974",
+      "duration_mins": "3"
+    },
+    {
+      "date": "2026-08-17",
+      "type": "Daily checkin",
+      "form_id": "fs_4561620218",
+      "duration_mins": "3"
+    },
+    {
+      "date": "2026-08-18",
+      "type": "Daily checkin",
+      "form_id": "fs_7726108815",
+      "duration_mins": "3"
+    }
+  ],
+  "scores": {
+    "phq": [
+      {
+        "value": 22,
+        "source": "intake",
+        "reported_on": "2026-07-11"
+      },
+      {
+        "value": 21,
+        "source": "weekly",
+        "reported_on": "2026-07-20"
+      },
+      {
+        "value": 23,
+        "source": "weekly",
+        "reported_on": "2026-07-29"
+      },
+      {
+        "value": 22,
+        "source": "weekly",
+        "reported_on": "2026-08-07"
+      },
+      {
+        "value": 24,
+        "source": "weekly",
+        "reported_on": "2026-08-16"
+      }
+    ],
+    "gad": [
+      {
+        "value": 18,
+        "source": "intake",
+        "reported_on": "2026-07-11"
+      },
+      {
+        "value": 18,
+        "source": "weekly",
+        "reported_on": "2026-07-20"
+      },
+      {
+        "value": 19,
+        "source": "weekly",
+        "reported_on": "2026-07-29"
+      },
+      {
+        "value": 18,
+        "source": "weekly",
+        "reported_on": "2026-08-07"
+      },
+      {
+        "value": 19,
+        "source": "weekly",
+        "reported_on": "2026-08-16"
+      }
+    ],
+    "feel_today": [
+      {
+        "value": 1,
+        "reported_on": "2026-08-19"
+      },
+      {
+        "value": 2,
+        "reported_on": "2026-08-18"
+      },
+      {
+        "value": 1,
+        "reported_on": "2026-08-17"
+      },
+      {
+        "value": 2,
+        "reported_on": "2026-08-16"
+      },
+      {
+        "value": 2,
+        "reported_on": "2026-08-15"
+      },
+      {
+        "value": 3,
+        "reported_on": "2026-08-14"
+      },
+      {
+        "value": 2,
+        "reported_on": "2026-08-13"
+      }
+    ],
+    "cssr": [
+      {
+        "value": "assessment not triggered",
+        "source": "intake",
+        "reported_on": "2026-07-11"
+      },
+      {
+        "value": "moderate",
+        "source": "checkin",
+        "reported_on": "2026-08-17"
+      }
+    ]
+  },
+  "recent_dose_feedback": [
+    {
+      "date_reported": "2026-08-18",
+      "type": "Daily",
+      "dose_pt_reported_taking": "30",
+      "dose_recommended": "30",
+      "troche_strength": "60",
+      "dose_feels_right": "i_m_not_sure",
+      "dose_helping_not_right": "the_dose_feels_too_low",
+      "side_effects": [
+        "nausea",
+        "sleep_issues"
+      ],
+      "notices_improvement": "no"
+    },
+    {
+      "date_reported": "2026-08-17",
+      "type": "Daily",
+      "dose_pt_reported_taking": "30",
+      "dose_recommended": "30",
+      "troche_strength": "60",
+      "dose_feels_right": "i_m_not_sure",
+      "side_effects": [
+        "nausea"
+      ],
+      "notices_improvement": "no"
+    }
+  ],
+  "dose_changelog": [
+    {
+      "change": "increase",
+      "from_dose": "15",
+      "to_dose": "30",
+      "date": "2026-08-14",
+      "initiator": "protocol",
+      "reason": "Dose feels too low and patient is comfortable raising dose"
+    }
+  ]
+}

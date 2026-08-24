@@ -1,0 +1,14 @@
+.next/
+node_modules/
+coverage/
+.env*
+!.env.example
+npm-debug.log*
+*.tsbuildinfo
+.DS_Store
+.vscode/
+
+# Internal case materials and working documents
+joyous_pm_patient_assistant_brief.md
+tier1_build_plan.md
+JoyousPM_PatientAssistant_Case/*.docx

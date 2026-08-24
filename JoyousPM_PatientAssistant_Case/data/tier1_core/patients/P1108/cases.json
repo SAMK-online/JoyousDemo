@@ -1,0 +1,26 @@
+{
+  "_note": "Synthetic data created for an interview exercise. Not real patients.",
+  "uid": "P1108",
+  "cases": [
+    {
+      "case_id": "c_1108_intake",
+      "case_type": "intake",
+      "case_group": "patient_chart",
+      "status": "close",
+      "next_action": "patient",
+      "opened_at": "2026-08-04",
+      "closed_at": "2026-08-05",
+      "form_ref": "forms/intake_form.json"
+    },
+    {
+      "case_id": "c_1108_payment",
+      "case_type": "payment",
+      "case_group": "patient_chart",
+      "status": "open",
+      "next_action": "patient",
+      "opened_at": "2026-08-04",
+      "closed_at": null,
+      "source": "manual"
+    }
+  ]
+}

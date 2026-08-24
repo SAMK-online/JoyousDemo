@@ -1,0 +1,20 @@
+{
+  "_note": "Synthetic data created for an interview exercise. Not real patients.",
+  "flow_label": "intake",
+  "uid": "P1203",
+  "finalized": true,
+  "submitted_at": "2026-07-21",
+  "answers": {
+    "PHQ": 16,
+    "GAD": 17,
+    "DAST": 0,
+    "AUDIT": 2,
+    "PCL5_1": 1,
+    "nicotine": "no",
+    "BMI": 22.6,
+    "why_come_to_joyous": "Anxiety has gotten worse since my husband passed. I can't settle.",
+    "intentions_goals": "Get through a day without the knot in my chest.",
+    "current_medications": "none",
+    "medical_history": "no cardiac history; BP normal at last physical"
+  }
+}

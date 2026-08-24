@@ -1,0 +1,45 @@
+{
+  "_note": "Synthetic data created for an interview exercise. Not real patients.",
+  "uid": "P1108",
+  "threads": [
+    {
+      "thread_id": "t_1108_a",
+      "opened_at": "2026-08-12T19:22:00",
+      "channel": "sms",
+      "status": "open",
+      "escalated_to": "care_team",
+      "tags": [
+        "shipping",
+        "account"
+      ],
+      "messages": [
+        {
+          "sent_at": "2026-08-12T19:22:00",
+          "from": "patient",
+          "text": "Hey - it's been a few days since my appointment. When does my medication ship?"
+        },
+        {
+          "sent_at": "2026-08-12T19:35:00",
+          "from": "ai_assistant",
+          "text": "Thanks for checking in. I can see your recent visit is still being reviewed. Your care team will be in touch with next steps."
+        },
+        {
+          "sent_at": "2026-08-13T08:04:00",
+          "from": "patient",
+          "text": "Reviewed? The nurse said I'd hear back in a couple of days. Am I being charged for this?"
+        },
+        {
+          "sent_at": "2026-08-14T14:10:00",
+          "from": "care_team",
+          "text": "Hi Devon, you have not been charged - billing only starts once treatment is approved and you activate. I'm sorry for the confusion."
+        },
+        {
+          "sent_at": "2026-08-14T14:36:00",
+          "from": "patient",
+          "text": "So I'm not approved? Nobody has actually told me that. What am I supposed to do now?"
+        }
+      ],
+      "unresolved_request": "Patient has not been given a clear answer about the outcome of his visit or what to do next. Open 5 days."
+    }
+  ]
+}

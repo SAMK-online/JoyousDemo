@@ -1,0 +1,85 @@
+{
+  "_note": "Synthetic data created for an interview exercise. Not real patients.",
+  "uid": "P1108",
+  "notes": [
+    {
+      "note_id": "vn_1108_nm",
+      "meeting_id": "m_1108_nm",
+      "date": "2026-08-08",
+      "meeting_type": "NM",
+      "participants": [
+        "S. Mbeki, RN",
+        "R. Whitfield, FNP-C",
+        "Patient"
+      ],
+      "transcript": [
+        {
+          "speaker": "Nurse",
+          "text": "Hi Devon, I'm Sipho. Before the provider joins, tell me what brought you here."
+        },
+        {
+          "speaker": "Patient",
+          "text": "Work's been brutal. I'm wired all the time, sleeping badly. Read that this helps with burnout."
+        },
+        {
+          "speaker": "Nurse",
+          "text": "Your intake put your depression score at 6 and anxiety at 5, which are both on the low side. Does that match?"
+        },
+        {
+          "speaker": "Patient",
+          "text": "I mean, I wouldn't say I'm depressed. I'm just fried."
+        },
+        {
+          "speaker": "Nurse",
+          "text": "I want to ask about alcohol. Your answers came out at 19 on the screening, which is high."
+        },
+        {
+          "speaker": "Patient",
+          "text": "I have a few after work. Everyone does in my line of work. It's not a problem, I just unwind."
+        },
+        {
+          "speaker": "Nurse",
+          "text": "And you noted a hospital stay in 2024?"
+        },
+        {
+          "speaker": "Patient",
+          "text": "Pancreatitis. They said it was probably the drinking but it cleared up."
+        },
+        {
+          "speaker": "Nurse",
+          "text": "Thanks for being straight with me. Let me get the provider."
+        },
+        {
+          "speaker": "Provider",
+          "text": "Devon, hi. I've gone through everything with Sipho. I don't think this is the right treatment for you at the moment."
+        },
+        {
+          "speaker": "Patient",
+          "text": "Why not? I thought this was for people like me."
+        },
+        {
+          "speaker": "Provider",
+          "text": "Two reasons. Your depression and anxiety scores are low enough that this isn't likely to be the right tool. And with the amount you're drinking, plus the pancreatitis, I'm not comfortable adding ketamine into the mix."
+        },
+        {
+          "speaker": "Patient",
+          "text": "So that's it?"
+        },
+        {
+          "speaker": "Provider",
+          "text": "Not necessarily. I'd like you to talk to your primary care doctor about the drinking and the sleep. If things change, you're welcome to come back."
+        },
+        {
+          "speaker": "Patient",
+          "text": "Fine."
+        },
+        {
+          "speaker": "Provider",
+          "text": "[note to file] AUDIT 19 with prior alcohol-related pancreatitis and clear minimisation. Declining today. He was irritated - if he contacts support, do not relitigate the clinical reasoning over text, offer a call."
+        }
+      ],
+      "clinical_summary": "34M presenting with occupational burnout. PHQ 6 / GAD 5 - below threshold. AUDIT 19, prior alcohol-related pancreatitis 2024, minimises intake. Not appropriate for VLD ketamine at this time.",
+      "plan": "Not approved. No prescription. Recommend primary care review of alcohol use and sleep. May reapply if circumstances change. Handle follow-up contact by phone, not text."
+    }
+  ]
+}

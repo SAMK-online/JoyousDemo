@@ -1,0 +1,106 @@
+{
+  "_note": "Synthetic data created for an interview exercise. Not real patients.",
+  "uid": "P1203",
+  "threads": [
+    {
+      "thread_id": "t_1203_a",
+      "opened_at": "2026-08-02T10:41:00",
+      "channel": "sms",
+      "status": "resolved",
+      "escalated_to": null,
+      "tags": [
+        "shipping"
+      ],
+      "messages": [
+        {
+          "sent_at": "2026-08-02T10:41:00",
+          "from": "patient",
+          "text": "It's been a week since my appointment and I haven't received anything. Where is my medication?"
+        },
+        {
+          "sent_at": "2026-08-02T10:55:00",
+          "from": "ai_assistant",
+          "text": "Medication usually arrives within 3-6 business days of your prescription being filled, shipped from our pharmacy partner in Wisconsin. You'll get a tracking number by text as soon as it's on its way."
+        },
+        {
+          "sent_at": "2026-08-02T11:02:00",
+          "from": "patient",
+          "text": "ok"
+        }
+      ],
+      "review_flag": "Answer assumed a prescription existed. No prescription had been written for this patient."
+    },
+    {
+      "thread_id": "t_1203_b",
+      "opened_at": "2026-08-10T16:18:00",
+      "channel": "sms",
+      "status": "open",
+      "escalated_to": "care_team",
+      "tags": [
+        "account",
+        "onboarding"
+      ],
+      "messages": [
+        {
+          "sent_at": "2026-08-10T16:18:00",
+          "from": "patient",
+          "text": "Still nothing. I've been charged and I haven't received a single thing. This is not right."
+        },
+        {
+          "sent_at": "2026-08-10T16:33:00",
+          "from": "ai_assistant",
+          "text": "I'm sorry - I've escalated this to our Care Team so someone can look at your account properly."
+        },
+        {
+          "sent_at": "2026-08-11T09:47:00",
+          "from": "care_team",
+          "text": "Hi Ruth, apologies for the wait. Before your provider can finalise your prescription we need a copy of a government photo ID. You can upload it from your account page."
+        },
+        {
+          "sent_at": "2026-08-11T12:30:00",
+          "from": "patient",
+          "text": "I don't see where to upload it. I emailed a photo of my driver's licence to the support address instead."
+        },
+        {
+          "sent_at": "2026-08-14T08:55:00",
+          "from": "patient",
+          "text": "Did that come through? I don't want to be charged again for nothing."
+        }
+      ],
+      "unresolved_request": "Patient reports emailing ID to support rather than uploading; receipt never confirmed. Onboarding blocked 23 days. Billing active throughout."
+    },
+    {
+      "thread_id": "t_1203_outbound",
+      "opened_at": "2026-07-29T09:00:00",
+      "channel": "sms",
+      "status": "no_reply",
+      "escalated_to": null,
+      "tags": [
+        "automated",
+        "start_date"
+      ],
+      "messages": [
+        {
+          "sent_at": "2026-07-29T09:00:00",
+          "from": "system_automated",
+          "text": "Hi Ruth - please confirm your start date so we can set up your check-ins: joyous.team/start-date"
+        },
+        {
+          "sent_at": "2026-07-31T09:00:00",
+          "from": "system_automated",
+          "text": "Hi Ruth - please confirm your start date so we can set up your check-ins: joyous.team/start-date"
+        },
+        {
+          "sent_at": "2026-08-02T09:00:00",
+          "from": "system_automated",
+          "text": "Hi Ruth - please confirm your start date so we can set up your check-ins: joyous.team/start-date"
+        },
+        {
+          "sent_at": "2026-08-16T09:00:00",
+          "from": "system_automated",
+          "text": "Hi Ruth - please confirm your start date so we can set up your check-ins: joyous.team/start-date"
+        }
+      ]
+    }
+  ]
+}

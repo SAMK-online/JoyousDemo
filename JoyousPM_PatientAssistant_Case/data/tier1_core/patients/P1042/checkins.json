@@ -1,0 +1,641 @@
+{
+  "_note": "Synthetic data created for an interview exercise. Not real patients.",
+  "uid": "P1042",
+  "cadence": "Weekly",
+  "checkins_count": 59,
+  "history": [
+    {
+      "date": "2026-03-14",
+      "type": "Daily checkin",
+      "form_id": "fs_3694357981",
+      "duration_mins": "4"
+    },
+    {
+      "date": "2026-03-15",
+      "type": "Daily checkin",
+      "form_id": "fs_6698942873",
+      "duration_mins": "3"
+    },
+    {
+      "date": "2026-03-16",
+      "type": "Daily checkin",
+      "form_id": "fs_0180379669",
+      "duration_mins": "3"
+    },
+    {
+      "date": "2026-03-17",
+      "type": "Daily checkin",
+      "form_id": "fs_1995961229",
+      "duration_mins": "3"
+    },
+    {
+      "date": "2026-03-18",
+      "type": "Daily checkin",
+      "form_id": "fs_5394712633",
+      "duration_mins": "3"
+    },
+    {
+      "date": "2026-03-19",
+      "type": "Daily checkin",
+      "form_id": "fs_5714338807",
+      "duration_mins": "3"
+    },
+    {
+      "date": "2026-03-20",
+      "type": "Daily checkin",
+      "form_id": "fs_2031868290",
+      "duration_mins": "2"
+    },
+    {
+      "date": "2026-03-21",
+      "type": "Daily checkin",
+      "form_id": "fs_6577142159",
+      "duration_mins": "5"
+    },
+    {
+      "date": "2026-03-22",
+      "type": "Daily checkin",
+      "form_id": "fs_7048360029",
+      "duration_mins": "3"
+    },
+    {
+      "date": "2026-03-23",
+      "type": "Daily checkin",
+      "form_id": "fs_8135433566",
+      "duration_mins": "5"
+    },
+    {
+      "date": "2026-03-24",
+      "type": "Daily checkin",
+      "form_id": "fs_5691157278",
+      "duration_mins": "4"
+    },
+    {
+      "date": "2026-03-25",
+      "type": "Daily checkin",
+      "form_id": "fs_9932047208",
+      "duration_mins": "3"
+    },
+    {
+      "date": "2026-03-26",
+      "type": "Daily checkin",
+      "form_id": "fs_3978196198",
+      "duration_mins": "4"
+    },
+    {
+      "date": "2026-03-27",
+      "type": "Daily checkin",
+      "form_id": "fs_0983779992",
+      "duration_mins": "3"
+    },
+    {
+      "date": "2026-03-28",
+      "type": "Daily checkin",
+      "form_id": "fs_9648245723",
+      "duration_mins": "5"
+    },
+    {
+      "date": "2026-03-29",
+      "type": "Daily checkin",
+      "form_id": "fs_0434597876",
+      "duration_mins": "2"
+    },
+    {
+      "date": "2026-03-30",
+      "type": "Daily checkin",
+      "form_id": "fs_2023262443",
+      "duration_mins": "2"
+    },
+    {
+      "date": "2026-03-31",
+      "type": "Daily checkin",
+      "form_id": "fs_3866218909",
+      "duration_mins": "5"
+    },
+    {
+      "date": "2026-04-01",
+      "type": "Daily checkin",
+      "form_id": "fs_5365141732",
+      "duration_mins": "4"
+    },
+    {
+      "date": "2026-04-02",
+      "type": "Daily checkin",
+      "form_id": "fs_5586610471",
+      "duration_mins": "3"
+    },
+    {
+      "date": "2026-04-03",
+      "type": "Daily checkin",
+      "form_id": "fs_2448896703",
+      "duration_mins": "3"
+    },
+    {
+      "date": "2026-04-04",
+      "type": "Daily checkin",
+      "form_id": "fs_4429360444",
+      "duration_mins": "3"
+    },
+    {
+      "date": "2026-04-05",
+      "type": "Daily checkin",
+      "form_id": "fs_0264215469",
+      "duration_mins": "4"
+    },
+    {
+      "date": "2026-04-06",
+      "type": "Daily checkin",
+      "form_id": "fs_6724509216",
+      "duration_mins": "4"
+    },
+    {
+      "date": "2026-04-07",
+      "type": "Daily checkin",
+      "form_id": "fs_7044365601",
+      "duration_mins": "2"
+    },
+    {
+      "date": "2026-04-08",
+      "type": "Daily checkin",
+      "form_id": "fs_7221388647",
+      "duration_mins": "2"
+    },
+    {
+      "date": "2026-04-09",
+      "type": "Daily checkin",
+      "form_id": "fs_0993295312",
+      "duration_mins": "5"
+    },
+    {
+      "date": "2026-04-10",
+      "type": "Daily checkin",
+      "form_id": "fs_7000070958",
+      "duration_mins": "5"
+    },
+    {
+      "date": "2026-04-11",
+      "type": "Daily checkin",
+      "form_id": "fs_0421074279",
+      "duration_mins": "3"
+    },
+    {
+      "date": "2026-04-12",
+      "type": "Daily checkin",
+      "form_id": "fs_2769011062",
+      "duration_mins": "3"
+    },
+    {
+      "date": "2026-04-13",
+      "type": "Daily checkin",
+      "form_id": "fs_8579043880",
+      "duration_mins": "3"
+    },
+    {
+      "date": "2026-04-14",
+      "type": "Daily checkin",
+      "form_id": "fs_3133012262",
+      "duration_mins": "5"
+    },
+    {
+      "date": "2026-04-15",
+      "type": "Daily checkin",
+      "form_id": "fs_1053193919",
+      "duration_mins": "4"
+    },
+    {
+      "date": "2026-04-16",
+      "type": "Daily checkin",
+      "form_id": "fs_7541514611",
+      "duration_mins": "5"
+    },
+    {
+      "date": "2026-04-17",
+      "type": "Daily checkin",
+      "form_id": "fs_4767088442",
+      "duration_mins": "4"
+    },
+    {
+      "date": "2026-04-18",
+      "type": "Daily checkin",
+      "form_id": "fs_1595156147",
+      "duration_mins": "2"
+    },
+    {
+      "date": "2026-04-19",
+      "type": "Daily checkin",
+      "form_id": "fs_8578866491",
+      "duration_mins": "2"
+    },
+    {
+      "date": "2026-04-20",
+      "type": "Daily checkin",
+      "form_id": "fs_6390369151",
+      "duration_mins": "3"
+    },
+    {
+      "date": "2026-04-21",
+      "type": "Daily checkin",
+      "form_id": "fs_7238247664",
+      "duration_mins": "4"
+    },
+    {
+      "date": "2026-04-22",
+      "type": "Daily checkin",
+      "form_id": "fs_7613332581",
+      "duration_mins": "2"
+    },
+    {
+      "date": "2026-04-23",
+      "type": "Daily checkin",
+      "form_id": "fs_8638162835",
+      "duration_mins": "2"
+    },
+    {
+      "date": "2026-04-24",
+      "type": "Daily checkin",
+      "form_id": "fs_1662002761",
+      "duration_mins": "3"
+    },
+    {
+      "date": "2026-04-25",
+      "type": "Weekly checkin",
+      "form_id": "fs_1819962601",
+      "duration_mins": "5"
+    },
+    {
+      "date": "2026-05-02",
+      "type": "Weekly checkin",
+      "form_id": "fs_2226267933",
+      "duration_mins": "4"
+    },
+    {
+      "date": "2026-05-09",
+      "type": "Weekly checkin",
+      "form_id": "fs_0034942955",
+      "duration_mins": "3"
+    },
+    {
+      "date": "2026-05-16",
+      "type": "Weekly checkin",
+      "form_id": "fs_0908261829",
+      "duration_mins": "4"
+    },
+    {
+      "date": "2026-05-23",
+      "type": "Weekly checkin",
+      "form_id": "fs_5556090324",
+      "duration_mins": "3"
+    },
+    {
+      "date": "2026-05-30",
+      "type": "Weekly checkin",
+      "form_id": "fs_1349098277",
+      "duration_mins": "2"
+    },
+    {
+      "date": "2026-06-06",
+      "type": "Weekly checkin",
+      "form_id": "fs_3979469620",
+      "duration_mins": "4"
+    },
+    {
+      "date": "2026-06-13",
+      "type": "Weekly checkin",
+      "form_id": "fs_2080034506",
+      "duration_mins": "3"
+    },
+    {
+      "date": "2026-06-20",
+      "type": "Weekly checkin",
+      "form_id": "fs_0920378496",
+      "duration_mins": "3"
+    },
+    {
+      "date": "2026-06-27",
+      "type": "Weekly checkin",
+      "form_id": "fs_7560341916",
+      "duration_mins": "5"
+    },
+    {
+      "date": "2026-07-04",
+      "type": "Weekly checkin",
+      "form_id": "fs_2613693567",
+      "duration_mins": "2"
+    },
+    {
+      "date": "2026-07-11",
+      "type": "Weekly checkin",
+      "form_id": "fs_2765300224",
+      "duration_mins": "4"
+    },
+    {
+      "date": "2026-07-18",
+      "type": "Weekly checkin",
+      "form_id": "fs_3719066982",
+      "duration_mins": "2"
+    },
+    {
+      "date": "2026-07-25",
+      "type": "Weekly checkin",
+      "form_id": "fs_5484461091",
+      "duration_mins": "3"
+    },
+    {
+      "date": "2026-08-01",
+      "type": "Weekly checkin",
+      "form_id": "fs_0245511055",
+      "duration_mins": "3"
+    },
+    {
+      "date": "2026-08-08",
+      "type": "Weekly checkin",
+      "form_id": "fs_2125468191",
+      "duration_mins": "3"
+    },
+    {
+      "date": "2026-08-15",
+      "type": "Weekly checkin",
+      "form_id": "fs_2436799925",
+      "duration_mins": "3"
+    }
+  ],
+  "scores": {
+    "phq": [
+      {
+        "value": 19,
+        "source": "intake",
+        "reported_on": "2026-02-26"
+      },
+      {
+        "value": 17,
+        "source": "weekly",
+        "reported_on": "2026-03-06"
+      },
+      {
+        "value": 18,
+        "source": "weekly",
+        "reported_on": "2026-03-14"
+      },
+      {
+        "value": 16,
+        "source": "weekly",
+        "reported_on": "2026-03-22"
+      },
+      {
+        "value": 16,
+        "source": "weekly",
+        "reported_on": "2026-03-30"
+      },
+      {
+        "value": 15,
+        "source": "weekly",
+        "reported_on": "2026-04-07"
+      },
+      {
+        "value": 14,
+        "source": "weekly",
+        "reported_on": "2026-04-15"
+      },
+      {
+        "value": 14,
+        "source": "weekly",
+        "reported_on": "2026-04-23"
+      },
+      {
+        "value": 12,
+        "source": "weekly",
+        "reported_on": "2026-05-01"
+      },
+      {
+        "value": 13,
+        "source": "weekly",
+        "reported_on": "2026-05-09"
+      },
+      {
+        "value": 11,
+        "source": "weekly",
+        "reported_on": "2026-05-17"
+      },
+      {
+        "value": 10,
+        "source": "weekly",
+        "reported_on": "2026-05-25"
+      },
+      {
+        "value": 11,
+        "source": "weekly",
+        "reported_on": "2026-06-02"
+      },
+      {
+        "value": 11,
+        "source": "weekly",
+        "reported_on": "2026-06-10"
+      },
+      {
+        "value": 9,
+        "source": "weekly",
+        "reported_on": "2026-06-18"
+      },
+      {
+        "value": 8,
+        "source": "weekly",
+        "reported_on": "2026-06-26"
+      },
+      {
+        "value": 8,
+        "source": "weekly",
+        "reported_on": "2026-07-04"
+      },
+      {
+        "value": 8,
+        "source": "weekly",
+        "reported_on": "2026-07-12"
+      },
+      {
+        "value": 7,
+        "source": "weekly",
+        "reported_on": "2026-07-20"
+      },
+      {
+        "value": 6,
+        "source": "weekly",
+        "reported_on": "2026-07-28"
+      }
+    ],
+    "gad": [
+      {
+        "value": 15,
+        "source": "intake",
+        "reported_on": "2026-02-26"
+      },
+      {
+        "value": 13,
+        "source": "weekly",
+        "reported_on": "2026-03-06"
+      },
+      {
+        "value": 15,
+        "source": "weekly",
+        "reported_on": "2026-03-14"
+      },
+      {
+        "value": 13,
+        "source": "weekly",
+        "reported_on": "2026-03-22"
+      },
+      {
+        "value": 12,
+        "source": "weekly",
+        "reported_on": "2026-03-30"
+      },
+      {
+        "value": 11,
+        "source": "weekly",
+        "reported_on": "2026-04-07"
+      },
+      {
+        "value": 11,
+        "source": "weekly",
+        "reported_on": "2026-04-15"
+      },
+      {
+        "value": 12,
+        "source": "weekly",
+        "reported_on": "2026-04-23"
+      },
+      {
+        "value": 10,
+        "source": "weekly",
+        "reported_on": "2026-05-01"
+      },
+      {
+        "value": 10,
+        "source": "weekly",
+        "reported_on": "2026-05-09"
+      },
+      {
+        "value": 10,
+        "source": "weekly",
+        "reported_on": "2026-05-17"
+      },
+      {
+        "value": 9,
+        "source": "weekly",
+        "reported_on": "2026-05-25"
+      },
+      {
+        "value": 9,
+        "source": "weekly",
+        "reported_on": "2026-06-02"
+      },
+      {
+        "value": 7,
+        "source": "weekly",
+        "reported_on": "2026-06-10"
+      },
+      {
+        "value": 7,
+        "source": "weekly",
+        "reported_on": "2026-06-18"
+      },
+      {
+        "value": 6,
+        "source": "weekly",
+        "reported_on": "2026-06-26"
+      },
+      {
+        "value": 7,
+        "source": "weekly",
+        "reported_on": "2026-07-04"
+      },
+      {
+        "value": 6,
+        "source": "weekly",
+        "reported_on": "2026-07-12"
+      },
+      {
+        "value": 5,
+        "source": "weekly",
+        "reported_on": "2026-07-20"
+      },
+      {
+        "value": 5,
+        "source": "weekly",
+        "reported_on": "2026-07-28"
+      }
+    ],
+    "feel_today": [
+      {
+        "value": 5,
+        "reported_on": "2026-08-19"
+      },
+      {
+        "value": 5,
+        "reported_on": "2026-08-12"
+      },
+      {
+        "value": 5,
+        "reported_on": "2026-08-05"
+      },
+      {
+        "value": 3,
+        "reported_on": "2026-07-29"
+      },
+      {
+        "value": 4,
+        "reported_on": "2026-07-22"
+      },
+      {
+        "value": 5,
+        "reported_on": "2026-07-15"
+      }
+    ],
+    "cssr": [
+      {
+        "value": "assessment not triggered",
+        "source": "intake",
+        "reported_on": "2026-02-26"
+      }
+    ]
+  },
+  "recent_dose_feedback": [
+    {
+      "date_reported": "2026-08-14",
+      "type": "Weekly",
+      "dose_pt_reported_taking": "45",
+      "dose_recommended": "45",
+      "troche_strength": "60",
+      "dose_feels_right": "yes",
+      "side_effects": [],
+      "notices_improvement": "yes"
+    },
+    {
+      "date_reported": "2026-08-07",
+      "type": "Weekly",
+      "dose_pt_reported_taking": "45",
+      "dose_recommended": "45",
+      "troche_strength": "60",
+      "dose_feels_right": "yes",
+      "side_effects": [],
+      "notices_improvement": "yes"
+    }
+  ],
+  "dose_changelog": [
+    {
+      "change": "increase",
+      "from_dose": "15",
+      "to_dose": "30",
+      "date": "2026-03-25",
+      "initiator": "protocol",
+      "reason": "Dose feels too low and patient is comfortable raising dose"
+    },
+    {
+      "change": "increase",
+      "from_dose": "30",
+      "to_dose": "45",
+      "date": "2026-04-12",
+      "initiator": "protocol",
+      "reason": "Patient Requested Dose Increase. GAD:9/PHQ:11 is big enough (>5) to increase the dose."
+    }
+  ]
+}

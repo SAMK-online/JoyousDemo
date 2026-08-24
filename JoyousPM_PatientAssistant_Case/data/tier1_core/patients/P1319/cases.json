@@ -1,0 +1,71 @@
+{
+  "_note": "Synthetic data created for an interview exercise. Not real patients.",
+  "uid": "P1319",
+  "cases": [
+    {
+      "case_id": "c_1319_treatment_1",
+      "case_type": "treatment",
+      "case_group": "treatment",
+      "status": "close",
+      "next_action": null,
+      "opened_at": "2025-09-02",
+      "closed_at": "2026-01-22",
+      "checkins_count": 57,
+      "case_refs": {
+        "payment": "close",
+        "medication_order": "close",
+        "start_date": "close"
+      }
+    },
+    {
+      "case_id": "c_1319_intake",
+      "case_type": "intake",
+      "case_group": "patient_chart",
+      "status": "close",
+      "next_action": "patient",
+      "opened_at": "2025-08-28",
+      "closed_at": "2025-08-30",
+      "form_ref": "forms/intake_form.json"
+    },
+    {
+      "case_id": "c_1319_startdate",
+      "case_type": "start_date",
+      "case_group": "patient_chart",
+      "status": "close",
+      "next_action": "patient",
+      "opened_at": "2025-09-06",
+      "closed_at": "2025-09-09",
+      "form_ref": null
+    },
+    {
+      "case_id": "c_1319_discovery",
+      "case_type": "dose_discovery",
+      "case_group": "treatment",
+      "status": "close",
+      "next_action": null,
+      "opened_at": "2025-09-10",
+      "closed_at": "2025-10-24",
+      "total_doses_taken": 44
+    },
+    {
+      "case_id": "c_1319_maintenance",
+      "case_type": "dose_maintenance",
+      "case_group": "treatment",
+      "status": "close",
+      "next_action": null,
+      "opened_at": "2025-10-24",
+      "closed_at": "2026-01-22",
+      "current_dose": "60"
+    },
+    {
+      "case_id": "c_1319_payment_old",
+      "case_type": "payment",
+      "case_group": "patient_chart",
+      "status": "open",
+      "next_action": "patient",
+      "opened_at": "2026-01-22",
+      "closed_at": null,
+      "source": "manual"
+    }
+  ]
+}

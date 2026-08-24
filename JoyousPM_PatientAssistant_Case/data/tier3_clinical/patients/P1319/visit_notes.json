@@ -1,0 +1,103 @@
+{
+  "_note": "Synthetic data created for an interview exercise. Not real patients.",
+  "uid": "P1319",
+  "notes": [
+    {
+      "note_id": "vn_1319_nm",
+      "meeting_id": "m_1319_nm",
+      "date": "2025-09-02",
+      "meeting_type": "NM",
+      "participants": [
+        "T. Okafor, RN",
+        "K. Alvarez, PMHNP-BC",
+        "Patient"
+      ],
+      "transcript": [
+        {
+          "speaker": "Nurse",
+          "text": "Hi Tom, what's been going on?"
+        },
+        {
+          "speaker": "Patient",
+          "text": "Got laid off in June. Since then I've been low, not sleeping, snapping at my wife over nothing."
+        },
+        {
+          "speaker": "Nurse",
+          "text": "Any self-harm thoughts?"
+        },
+        {
+          "speaker": "Patient",
+          "text": "No."
+        },
+        {
+          "speaker": "Nurse",
+          "text": "Any medical conditions?"
+        },
+        {
+          "speaker": "Patient",
+          "text": "High blood pressure, controlled with lisinopril."
+        },
+        {
+          "speaker": "Provider",
+          "text": "Tom, your scores are 17 and 12. Blood pressure being controlled is fine for our purposes but I'll want it checked in your weekly check-ins."
+        },
+        {
+          "speaker": "Patient",
+          "text": "Sure."
+        },
+        {
+          "speaker": "Provider",
+          "text": "I'm going to use a 100mg troche for you, starting at a quarter of that."
+        }
+      ],
+      "clinical_summary": "52M, depressive episode following job loss. PHQ 17 / GAD 12. Hypertension controlled on lisinopril.",
+      "plan": "Approve. 100mg troche, start 25mg. Weekly BP readings in check-in. 30-day supply."
+    },
+    {
+      "note_id": "vn_1319_fu1",
+      "meeting_id": "m_1319_fu1",
+      "date": "2025-11-12",
+      "meeting_type": "FU",
+      "participants": [
+        "K. Alvarez, PMHNP-BC",
+        "Patient"
+      ],
+      "transcript": [
+        {
+          "speaker": "Provider",
+          "text": "Tom, you're doing well - 17 down to 11, anxiety 12 to 8. Blood pressure readings look stable."
+        },
+        {
+          "speaker": "Patient",
+          "text": "I'm running again. Wife says I'm easier to live with."
+        },
+        {
+          "speaker": "Provider",
+          "text": "You've settled at 60mg split into two doses. Any reason to change it?"
+        },
+        {
+          "speaker": "Patient",
+          "text": "No, it suits me."
+        },
+        {
+          "speaker": "Provider",
+          "text": "I'll renew for five shipments. Book with me before those run out."
+        },
+        {
+          "speaker": "Patient",
+          "text": "Will do. Money's a bit tight, but I'll manage."
+        },
+        {
+          "speaker": "Provider",
+          "text": "If cost becomes an issue, talk to the Care Team before you stop - there may be options."
+        },
+        {
+          "speaker": "Provider",
+          "text": "[note to file] Good responder at 60mg split. If he lapses and returns after a gap, restart titration from the standard quarter dose rather than resuming 60 directly - do not assume prior tolerance carries over. He raised cost; flag retention risk."
+        }
+      ],
+      "clinical_summary": "Sustained response at 8 weeks. PHQ 17->11, GAD 12->8. Stable BP. Settled on 60mg split dosing.",
+      "plan": "Renew prescription: 100mg troche, 5 refills. Continue 60mg split. On any return after a treatment gap, restart titration from quarter dose. Cost flagged as retention risk."
+    }
+  ]
+}

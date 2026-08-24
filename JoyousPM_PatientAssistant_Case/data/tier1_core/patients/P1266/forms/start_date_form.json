@@ -1,0 +1,13 @@
+{
+  "_note": "Synthetic data created for an interview exercise. Not real patients.",
+  "flow_label": "start-date",
+  "uid": "P1266",
+  "finalized": true,
+  "submitted_at": "2026-07-31",
+  "answers": {
+    "recieved_medication": "yes",
+    "problem_shipment": null,
+    "chosen_date": "2026-08-01",
+    "pt_focus_choice_final": "depression"
+  }
+}
