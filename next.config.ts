@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   agentRules: false,
-  output: "standalone",
+  output: process.env.BUILD_STANDALONE === "true" ? "standalone" : undefined,
   poweredByHeader: false,
   outputFileTracingIncludes: {
     "/*": ["./JoyousPM_PatientAssistant_Case/data/**/*.json"],

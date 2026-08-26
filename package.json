@@ -9,7 +9,7 @@
     "dev:api": "tsx watch backend/src/server.ts",
     "build": "next build",
     "build:api": "tsup backend/src/server.ts backend/src/db/migrate.ts backend/src/db/seed.ts --format esm --platform node --out-dir backend/dist --clean",
-    "start": "node .next/standalone/server.js",
+    "start": "next start",
     "start:api": "node backend/dist/server.js",
     "db:migrate": "tsx backend/src/db/migrate.ts",
     "db:seed": "tsx backend/src/db/seed.ts",
