@@ -3,7 +3,7 @@ import type {
   PatientId,
   RawTier1Record,
   VisitNotesFile,
-} from "@/lib/domain/types";
+} from "../domain/types.js";
 
 export interface PatientDocuments {
   record: RawTier1Record;

@@ -7,18 +7,18 @@ import Fastify, { type FastifyBaseLogger, type FastifyInstance } from "fastify";
 import type { Pool } from "pg";
 import { z } from "zod";
 
-import type { AppConfig } from "@/backend/src/config";
+import type { AppConfig } from "./config.js";
 import {
   insightsChatRequestSchema,
   patientChatRequestSchema,
-} from "@/backend/src/contracts/schemas";
-import type { ConversationStore } from "@/backend/src/persistence/ConversationStore";
-import { answerPatientQuestion } from "@/lib/assistant/answerPatientQuestion";
-import { generatePatientAnswer } from "@/lib/assistant/openaiResponseGenerator";
-import type { PatientRepository } from "@/lib/data/patientRepository";
-import { normalizePatientRecord, toPatientListItem } from "@/lib/domain/normalizePatient";
-import { generateProductInsightAnswer } from "@/lib/insights/productInsightsAssistant";
-import { buildTier3ProductInsights } from "@/lib/insights/tier3ProductInsights";
+} from "./contracts/schemas.js";
+import type { ConversationStore } from "./persistence/ConversationStore.js";
+import { answerPatientQuestion } from "../../lib/assistant/answerPatientQuestion.js";
+import { generatePatientAnswer } from "../../lib/assistant/openaiResponseGenerator.js";
+import type { PatientRepository } from "../../lib/data/patientRepository.js";
+import { normalizePatientRecord, toPatientListItem } from "../../lib/domain/normalizePatient.js";
+import { generateProductInsightAnswer } from "../../lib/insights/productInsightsAssistant.js";
+import { buildTier3ProductInsights } from "../../lib/insights/tier3ProductInsights.js";
 
 interface BuildAppOptions {
   config: AppConfig;

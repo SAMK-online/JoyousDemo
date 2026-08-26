@@ -1,10 +1,10 @@
 import "dotenv/config";
 
-import { buildApp } from "@/backend/src/app";
-import { loadConfig } from "@/backend/src/config";
-import { createPool } from "@/backend/src/db/pool";
-import { PostgresConversationStore } from "@/backend/src/persistence/ConversationStore";
-import { PostgresPatientRepository } from "@/backend/src/repositories/PostgresPatientRepository";
+import { buildApp } from "./app.js";
+import { loadConfig } from "./config.js";
+import { createPool } from "./db/pool.js";
+import { PostgresConversationStore } from "./persistence/ConversationStore.js";
+import { PostgresPatientRepository } from "./repositories/PostgresPatientRepository.js";
 
 const config = loadConfig();
 const pool = createPool(config.DATABASE_URL, config.DATABASE_SSL_MODE);

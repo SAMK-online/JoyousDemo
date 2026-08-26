@@ -2,7 +2,7 @@ import { randomUUID } from "node:crypto";
 
 import type { Pool } from "pg";
 
-import type { AssistantAnswer, PatientId } from "@/lib/domain/types";
+import type { AssistantAnswer, PatientId } from "../../../lib/domain/types.js";
 
 export type ConversationChannel = "patient" | "product_insights";
 

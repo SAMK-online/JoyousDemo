@@ -6,14 +6,14 @@ import {
   parseStoredPatientDocuments,
   parseStoredPatientMemory,
   parseStoredTier1Record,
-} from "@/lib/data/jsonPatientRepository";
-import type { PatientDocuments, PatientRepository } from "@/lib/data/patientRepository";
+} from "../../../lib/data/jsonPatientRepository.js";
+import type { PatientDocuments, PatientRepository } from "../../../lib/data/patientRepository.js";
 import {
   type ConversationsFile,
   type PatientId,
   type RawTier1Record,
   type VisitNotesFile,
-} from "@/lib/domain/types";
+} from "../../../lib/domain/types.js";
 
 interface PatientRecordRow {
   uid: unknown;

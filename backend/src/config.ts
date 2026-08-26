@@ -6,6 +6,7 @@ const configSchema = z.object({
   HOST: z.string().default("0.0.0.0"),
   DATABASE_URL: z.string().min(1),
   DATABASE_SSL_MODE: z.enum(["disable", "require", "verify-full"]).default("disable"),
+  DATABASE_POOL_MAX: z.coerce.number().int().min(1).max(20).default(3),
   BACKEND_SERVICE_TOKEN: z.string().min(24),
   FRONTEND_ORIGIN: z.string().url().default("http://localhost:3000"),
   OPENAI_TIMEOUT_MS: z.coerce.number().int().min(1_000).max(60_000).default(20_000),

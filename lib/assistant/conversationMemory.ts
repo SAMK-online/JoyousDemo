@@ -4,7 +4,7 @@ import type {
   NormalizedConversationThread,
   PatientMemoryContext,
   Tier1PatientContext,
-} from "@/lib/domain/types";
+} from "../domain/types.js";
 
 const categoryTags: Record<string, string[]> = {
   shipment: ["shipping", "refill", "problem_shipment"],

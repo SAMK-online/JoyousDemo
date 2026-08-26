@@ -26,6 +26,7 @@ services:
       HOST: 0.0.0.0
       DATABASE_URL: postgresql://joyous:joyous@postgres:5432/joyous
       DATABASE_SSL_MODE: disable
+      DATABASE_POOL_MAX: 3
       BACKEND_SERVICE_TOKEN: ${BACKEND_SERVICE_TOKEN}
       FRONTEND_ORIGIN: http://localhost:3000
       OPENAI_API_KEY: ${OPENAI_API_KEY}

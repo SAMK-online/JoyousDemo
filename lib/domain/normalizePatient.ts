@@ -9,7 +9,7 @@ import type {
   Tier1PatientContext,
   TrendSummary,
   VisitNotesFile,
-} from "@/lib/domain/types";
+} from "./types.js";
 
 export const EXERCISE_DATE = "2026-08-19";
 

@@ -1,8 +1,8 @@
 import "dotenv/config";
 
-import { loadConfig } from "@/backend/src/config";
-import { createPool } from "@/backend/src/db/pool";
-import { JsonPatientRepository } from "@/lib/data/jsonPatientRepository";
+import { loadConfig } from "../config.js";
+import { createPool } from "./pool.js";
+import { JsonPatientRepository } from "../../../lib/data/jsonPatientRepository.js";
 
 export async function seedDatabase(): Promise<void> {
   const config = loadConfig();

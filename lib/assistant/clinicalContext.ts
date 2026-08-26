@@ -3,7 +3,7 @@ import type {
   ClinicalVisitContext,
   PatientClinicalContext,
   Tier1PatientContext,
-} from "@/lib/domain/types";
+} from "../domain/types.js";
 
 const categoryTopics: Record<string, string[]> = {
   shipment: ["refill", "approval"],

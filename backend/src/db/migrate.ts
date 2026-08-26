@@ -3,8 +3,8 @@ import "dotenv/config";
 import { readdir, readFile } from "node:fs/promises";
 import path from "node:path";
 
-import { loadConfig } from "@/backend/src/config";
-import { createPool } from "@/backend/src/db/pool";
+import { loadConfig } from "../config.js";
+import { createPool } from "./pool.js";
 
 export async function runMigrations(): Promise<void> {
   const config = loadConfig();

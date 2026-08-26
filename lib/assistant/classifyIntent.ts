@@ -2,7 +2,7 @@ import {
   checkSafetyOverride,
   isDoseChangeRequest,
   isUrgentMedicalMessage,
-} from "@/lib/assistant/guardrails";
+} from "./guardrails.js";
 
 export type PatientIntent =
   | "crisis"

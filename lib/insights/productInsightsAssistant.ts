@@ -1,11 +1,11 @@
 import { zodTextFormat } from "openai/helpers/zod";
 import { z } from "zod";
 
-import { createOpenAIClient } from "@/lib/assistant/openaiClient";
+import { createOpenAIClient } from "../assistant/openaiClient.js";
 import type {
   ProductInsightTheme,
   Tier3ProductInsightsReport,
-} from "@/lib/insights/tier3ProductInsights";
+} from "./tier3ProductInsights.js";
 
 const DEFAULT_MODEL = "gpt-5.6-luna";
 

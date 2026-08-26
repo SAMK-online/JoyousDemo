@@ -13,6 +13,7 @@ const config: AppConfig = {
   HOST: "127.0.0.1",
   DATABASE_URL: "postgresql://unused",
   DATABASE_SSL_MODE: "disable",
+  DATABASE_POOL_MAX: 3,
   BACKEND_SERVICE_TOKEN: serviceToken,
   FRONTEND_ORIGIN: "http://localhost:3000",
   OPENAI_TIMEOUT_MS: 20_000,

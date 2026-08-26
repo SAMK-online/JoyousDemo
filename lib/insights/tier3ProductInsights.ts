@@ -1,4 +1,4 @@
-import type { VisitNotesFile } from "@/lib/domain/types";
+import type { VisitNotesFile } from "../domain/types.js";
 
 export type InsightCoverage = "covered" | "partial" | "gap";
 export type InsightPriority = "high" | "medium" | "low";

@@ -15,8 +15,8 @@ import {
   type RawTier1Record,
   type ShipmentsFile,
   type VisitNotesFile,
-} from "@/lib/domain/types";
-import type { PatientDocuments, PatientRepository } from "@/lib/data/patientRepository";
+} from "../domain/types.js";
+import type { PatientDocuments, PatientRepository } from "./patientRepository.js";
 
 const tier1Root = path.join(
   process.cwd(),

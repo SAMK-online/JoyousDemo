@@ -1,21 +1,21 @@
 import { zodTextFormat } from "openai/helpers/zod";
 import { z } from "zod";
 
-import { checkSafetyOverride, isDoseChangeRequest } from "@/lib/assistant/guardrails";
-import { createOpenAIClient } from "@/lib/assistant/openaiClient";
+import { checkSafetyOverride, isDoseChangeRequest } from "./guardrails.js";
+import { createOpenAIClient } from "./openaiClient.js";
 import {
   selectRelevantMemory,
   type SelectedConversationMemory,
-} from "@/lib/assistant/conversationMemory";
+} from "./conversationMemory.js";
 import {
   selectRelevantClinicalContext,
   type SelectedClinicalContext,
-} from "@/lib/assistant/clinicalContext";
+} from "./clinicalContext.js";
 import type {
   AssistantAnswer,
   KnowledgeArticle,
   Tier1PatientContext,
-} from "@/lib/domain/types";
+} from "../domain/types.js";
 
 const DEFAULT_MODEL = "gpt-5.6-luna";
 

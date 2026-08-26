@@ -1,7 +1,7 @@
-import { classifyIntent } from "@/lib/assistant/classifyIntent";
-import { applyConversationMemory } from "@/lib/assistant/conversationMemory";
-import { applyClinicalContext } from "@/lib/assistant/clinicalContext";
-import { checkSafetyOverride, isDoseChangeRequest } from "@/lib/assistant/guardrails";
+import { classifyIntent } from "./classifyIntent.js";
+import { applyConversationMemory } from "./conversationMemory.js";
+import { applyClinicalContext } from "./clinicalContext.js";
+import { checkSafetyOverride, isDoseChangeRequest } from "./guardrails.js";
 import type {
   AssistantAnswer,
   Handoff,
@@ -9,7 +9,7 @@ import type {
   Meeting,
   PatientCase,
   Tier1PatientContext,
-} from "@/lib/domain/types";
+} from "../domain/types.js";
 
 const trackingLabels: Record<string, string> = {
   AC: "Accepted by USPS",

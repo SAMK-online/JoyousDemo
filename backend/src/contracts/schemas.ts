@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-import { PATIENT_IDS } from "@/lib/domain/types";
+import { PATIENT_IDS } from "../../../lib/domain/types.js";
 
 export const conversationHistorySchema = z.array(z.object({
   role: z.enum(["patient", "assistant"]),
