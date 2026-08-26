@@ -8,6 +8,8 @@ const configSchema = z.object({
   DATABASE_SSL_MODE: z.enum(["disable", "require", "verify-full"]).default("disable"),
   BACKEND_SERVICE_TOKEN: z.string().min(24),
   FRONTEND_ORIGIN: z.string().url().default("http://localhost:3000"),
+  OPENAI_TIMEOUT_MS: z.coerce.number().int().min(1_000).max(60_000).default(20_000),
+  OPENAI_MAX_RETRIES: z.coerce.number().int().min(0).max(3).default(0),
   LOG_LEVEL: z.enum(["fatal", "error", "warn", "info", "debug", "trace", "silent"]).default("info"),
 });
 

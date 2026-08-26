@@ -1,9 +1,14 @@
 import type { Pool } from "pg";
 
-import { parsePatientId } from "@/lib/data/jsonPatientRepository";
-import type { PatientRepository } from "@/lib/data/patientRepository";
 import {
-  PATIENT_IDS,
+  parsePatientId,
+  parseStoredClinicalNotes,
+  parseStoredPatientDocuments,
+  parseStoredPatientMemory,
+  parseStoredTier1Record,
+} from "@/lib/data/jsonPatientRepository";
+import type { PatientDocuments, PatientRepository } from "@/lib/data/patientRepository";
+import {
   type ConversationsFile,
   type PatientId,
   type RawTier1Record,
@@ -11,10 +16,10 @@ import {
 } from "@/lib/domain/types";
 
 interface PatientRecordRow {
-  uid: PatientId;
-  tier1_record: RawTier1Record;
-  memory_record: ConversationsFile;
-  clinical_record: VisitNotesFile;
+  uid: unknown;
+  tier1_record: unknown;
+  memory_record: unknown;
+  clinical_record: unknown;
 }
 
 export class PostgresPatientRepository implements PatientRepository {
@@ -28,18 +33,36 @@ export class PostgresPatientRepository implements PatientRepository {
   }
 
   async getPatientRecord(patientIdInput: unknown): Promise<RawTier1Record> {
-    return (await this.getRow(patientIdInput)).tier1_record;
+    const uid = parsePatientId(patientIdInput);
+    const result = await this.pool.query<{ tier1_record: unknown }>(
+      "SELECT tier1_record FROM patient_records WHERE uid = $1",
+      [uid],
+    );
+    if (!result.rows[0]) throw new Error(`Patient record not found: ${uid}`);
+    return parseStoredTier1Record(uid, result.rows[0].tier1_record);
   }
 
   async getPatientMemory(patientIdInput: unknown): Promise<ConversationsFile> {
-    return (await this.getRow(patientIdInput)).memory_record;
+    const uid = parsePatientId(patientIdInput);
+    const result = await this.pool.query<{ memory_record: unknown }>(
+      "SELECT memory_record FROM patient_records WHERE uid = $1",
+      [uid],
+    );
+    if (!result.rows[0]) throw new Error(`Patient record not found: ${uid}`);
+    return parseStoredPatientMemory(uid, result.rows[0].memory_record);
   }
 
   async getPatientClinicalNotes(patientIdInput: unknown): Promise<VisitNotesFile> {
-    return (await this.getRow(patientIdInput)).clinical_record;
+    const uid = parsePatientId(patientIdInput);
+    const result = await this.pool.query<{ clinical_record: unknown }>(
+      "SELECT clinical_record FROM patient_records WHERE uid = $1",
+      [uid],
+    );
+    if (!result.rows[0]) throw new Error(`Patient record not found: ${uid}`);
+    return parseStoredClinicalNotes(uid, result.rows[0].clinical_record);
   }
 
-  private async getRow(patientIdInput: unknown): Promise<PatientRecordRow> {
+  async getPatientDocuments(patientIdInput: unknown): Promise<PatientDocuments> {
     const uid = parsePatientId(patientIdInput);
     const result = await this.pool.query<PatientRecordRow>(
       `SELECT uid, tier1_record, memory_record, clinical_record
@@ -48,7 +71,12 @@ export class PostgresPatientRepository implements PatientRepository {
       [uid],
     );
     const row = result.rows[0];
-    if (!row || !PATIENT_IDS.includes(row.uid)) throw new Error(`Patient record not found: ${uid}`);
-    return row;
+    if (!row) throw new Error(`Patient record not found: ${uid}`);
+    return parseStoredPatientDocuments(
+      uid,
+      row.tier1_record,
+      row.memory_record,
+      row.clinical_record,
+    );
   }
 }

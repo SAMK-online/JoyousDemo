@@ -1,8 +1,8 @@
-import OpenAI from "openai";
 import { zodTextFormat } from "openai/helpers/zod";
 import { z } from "zod";
 
 import { checkSafetyOverride, isDoseChangeRequest } from "@/lib/assistant/guardrails";
+import { createOpenAIClient } from "@/lib/assistant/openaiClient";
 import {
   selectRelevantMemory,
   type SelectedConversationMemory,
@@ -279,7 +279,7 @@ ${JSON.stringify(groundedContext)}`;
 }
 
 async function callOpenAI({ apiKey, systemPrompt, history, message, model }: GeneratorInput): Promise<string> {
-  const client = new OpenAI({ apiKey });
+  const client = createOpenAIClient(apiKey);
   const response = await client.responses.parse({
     model,
     input: [

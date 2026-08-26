@@ -3,12 +3,31 @@ import { randomUUID } from "node:crypto";
 import { describe, expect, it } from "vitest";
 
 import { createPool } from "@/backend/src/db/pool";
+import { seedDatabase } from "@/backend/src/db/seed";
 import { PostgresConversationStore } from "@/backend/src/persistence/ConversationStore";
 import { PostgresPatientRepository } from "@/backend/src/repositories/PostgresPatientRepository";
 
 const databaseUrl = process.env.TEST_DATABASE_URL;
 
 describe.skipIf(!databaseUrl)("PostgreSQL persistence", () => {
+  it("keeps source versions stable when an unchanged seed is applied again", async () => {
+    if (process.env.DATABASE_URL !== databaseUrl) return;
+    const pool = createPool(databaseUrl as string);
+    try {
+      await seedDatabase();
+      const before = await pool.query<{ source_version: number }>(
+        "SELECT source_version FROM patient_records WHERE uid = 'P1042'",
+      );
+      await seedDatabase();
+      const after = await pool.query<{ source_version: number }>(
+        "SELECT source_version FROM patient_records WHERE uid = 'P1042'",
+      );
+      expect(after.rows[0].source_version).toBe(before.rows[0].source_version);
+    } finally {
+      await pool.end();
+    }
+  });
+
   it("reads seeded patients and commits a complete exchange", async () => {
     const pool = createPool(databaseUrl as string);
     const repository = new PostgresPatientRepository(pool);

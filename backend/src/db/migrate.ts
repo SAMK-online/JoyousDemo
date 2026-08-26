@@ -12,6 +12,7 @@ export async function runMigrations(): Promise<void> {
   const client = await pool.connect();
 
   try {
+    await client.query("SELECT pg_advisory_lock(hashtext('joyous_schema_migrations'))");
     await client.query(`
       CREATE TABLE IF NOT EXISTS app_migrations (
         version TEXT PRIMARY KEY,
@@ -40,6 +41,7 @@ export async function runMigrations(): Promise<void> {
       }
     }
   } finally {
+    await client.query("SELECT pg_advisory_unlock(hashtext('joyous_schema_migrations'))").catch(() => undefined);
     client.release();
     await pool.end();
   }

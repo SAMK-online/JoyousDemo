@@ -39,7 +39,7 @@ npm run dev
 
 Configure every placeholder in `.env`. Generate strong values with `openssl rand -base64 48`. The required variables are:
 
-- `OPENAI_API_KEY` and `OPENAI_MODEL`
+- `OPENAI_API_KEY`, `OPENAI_MODEL`, `OPENAI_TIMEOUT_MS`, and `OPENAI_MAX_RETRIES`
 - `DATABASE_URL`
 - `DATABASE_SSL_MODE` (`disable` locally; `verify-full` when the managed provider supplies a trusted certificate)
 - `BACKEND_API_URL` and `BACKEND_SERVICE_TOKEN`

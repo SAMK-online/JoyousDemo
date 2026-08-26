@@ -1,7 +1,7 @@
-import OpenAI from "openai";
 import { zodTextFormat } from "openai/helpers/zod";
 import { z } from "zod";
 
+import { createOpenAIClient } from "@/lib/assistant/openaiClient";
 import type {
   ProductInsightTheme,
   Tier3ProductInsightsReport,
@@ -122,7 +122,7 @@ async function callOpenAI({
   history,
   message,
 }: GeneratorInput): Promise<z.infer<typeof insightAnswerSchema>> {
-  const client = new OpenAI({ apiKey });
+  const client = createOpenAIClient(apiKey);
   const response = await client.responses.parse({
     model,
     input: [

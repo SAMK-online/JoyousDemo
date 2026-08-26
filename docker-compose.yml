@@ -30,6 +30,8 @@ services:
       FRONTEND_ORIGIN: http://localhost:3000
       OPENAI_API_KEY: ${OPENAI_API_KEY}
       OPENAI_MODEL: ${OPENAI_MODEL:-gpt-5.6-luna}
+      OPENAI_TIMEOUT_MS: ${OPENAI_TIMEOUT_MS:-20000}
+      OPENAI_MAX_RETRIES: ${OPENAI_MAX_RETRIES:-0}
       LOG_LEVEL: info
     command: ["sh", "-c", "node backend/dist/db/migrate.js && node backend/dist/db/seed.js && node backend/dist/server.js"]
     depends_on:
@@ -64,7 +66,7 @@ services:
     ports:
       - "3000:3000"
     healthcheck:
-      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:3000/login"]
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:3000/api/health"]
       interval: 10s
       timeout: 5s
       retries: 10

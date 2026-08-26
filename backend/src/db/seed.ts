@@ -12,11 +12,7 @@ export async function seedDatabase(): Promise<void> {
   try {
     const patientIds = await source.listPatientIds();
     for (const uid of patientIds) {
-      const [tier1, memory, clinical] = await Promise.all([
-        source.getPatientRecord(uid),
-        source.getPatientMemory(uid),
-        source.getPatientClinicalNotes(uid),
-      ]);
+      const { record: tier1, memory, clinical } = await source.getPatientDocuments(uid);
       await pool.query(
         `INSERT INTO patient_records(uid, tier1_record, memory_record, clinical_record)
          VALUES ($1, $2::jsonb, $3::jsonb, $4::jsonb)
@@ -25,7 +21,10 @@ export async function seedDatabase(): Promise<void> {
            memory_record = EXCLUDED.memory_record,
            clinical_record = EXCLUDED.clinical_record,
            source_version = patient_records.source_version + 1,
-           updated_at = NOW()`,
+           updated_at = NOW()
+         WHERE patient_records.tier1_record IS DISTINCT FROM EXCLUDED.tier1_record
+            OR patient_records.memory_record IS DISTINCT FROM EXCLUDED.memory_record
+            OR patient_records.clinical_record IS DISTINCT FROM EXCLUDED.clinical_record`,
         [uid, JSON.stringify(tier1), JSON.stringify(memory), JSON.stringify(clinical)],
       );
     }

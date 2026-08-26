@@ -83,11 +83,7 @@ export async function buildApp(options: BuildAppOptions): Promise<FastifyInstanc
   app.get("/v1/patients", async () => {
     const patientIds = await options.repository.listPatientIds();
     const patients = await Promise.all(patientIds.map(async (uid) => {
-      const [record, memory, clinical] = await Promise.all([
-        options.repository.getPatientRecord(uid),
-        options.repository.getPatientMemory(uid),
-        options.repository.getPatientClinicalNotes(uid),
-      ]);
+      const { record, memory, clinical } = await options.repository.getPatientDocuments(uid);
       return toPatientListItem(normalizePatientRecord(record, memory, clinical));
     }));
     return { data: patients };
@@ -97,11 +93,7 @@ export async function buildApp(options: BuildAppOptions): Promise<FastifyInstanc
     config: { rateLimit: { max: 30, timeWindow: "1 minute" } },
   }, async (request) => {
     const body = patientChatRequestSchema.parse(request.body);
-    const [record, memory, clinical] = await Promise.all([
-      options.repository.getPatientRecord(body.patientId),
-      options.repository.getPatientMemory(body.patientId),
-      options.repository.getPatientClinicalNotes(body.patientId),
-    ]);
+    const { record, memory, clinical } = await options.repository.getPatientDocuments(body.patientId);
     const context = normalizePatientRecord(record, memory, clinical);
     const baseline = answerPatientQuestion(context, body.message);
     const { result, generation } = await generatePatientAnswer(

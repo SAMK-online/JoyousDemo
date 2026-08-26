@@ -16,6 +16,7 @@ import {
   type ShipmentsFile,
   type VisitNotesFile,
 } from "@/lib/domain/types";
+import type { PatientDocuments, PatientRepository } from "@/lib/data/patientRepository";
 
 const tier1Root = path.join(
   process.cwd(),
@@ -130,6 +131,16 @@ const visitNotesSchema = z.object({
   notes: z.array(visitNoteSchema),
 });
 
+const storedTier1RecordSchema = z.object({
+  patient: patientSchema,
+  cases: casesSchema,
+  meetings: meetingsSchema,
+  shipments: shipmentsSchema,
+  checkins: checkinsSchema,
+  forms: z.array(formSchema.extend({ sourceFile: z.string() })),
+  knowledgeBase: z.array(articleSchema.extend({ sourceFile: z.string() })),
+});
+
 async function parseJson<T>(filePath: string, schema: z.ZodType<T>): Promise<T> {
   const raw = await readFile(filePath, "utf8");
   return schema.parse(JSON.parse(raw));
@@ -139,7 +150,41 @@ export function parsePatientId(value: unknown): PatientId {
   return patientIdSchema.parse(value);
 }
 
-export class JsonPatientRepository {
+export function parseStoredTier1Record(patientIdInput: unknown, input: unknown): RawTier1Record {
+  const uid = parsePatientId(patientIdInput);
+  const record = storedTier1RecordSchema.parse(input) as unknown as RawTier1Record;
+  if (record.patient.uid !== uid) throw new Error(`Stored Tier 1 patient mismatch for ${uid}`);
+  return record;
+}
+
+export function parseStoredPatientMemory(patientIdInput: unknown, input: unknown): ConversationsFile {
+  const uid = parsePatientId(patientIdInput);
+  const memory = conversationsSchema.parse(input) as ConversationsFile;
+  if (memory.uid !== uid) throw new Error(`Stored Tier 2 patient mismatch for ${uid}`);
+  return memory;
+}
+
+export function parseStoredClinicalNotes(patientIdInput: unknown, input: unknown): VisitNotesFile {
+  const uid = parsePatientId(patientIdInput);
+  const clinical = visitNotesSchema.parse(input) as VisitNotesFile;
+  if (clinical.uid !== uid) throw new Error(`Stored Tier 3 patient mismatch for ${uid}`);
+  return clinical;
+}
+
+export function parseStoredPatientDocuments(
+  patientIdInput: unknown,
+  tier1Input: unknown,
+  memoryInput: unknown,
+  clinicalInput: unknown,
+): PatientDocuments {
+  const uid = parsePatientId(patientIdInput);
+  const record = parseStoredTier1Record(uid, tier1Input);
+  const memory = parseStoredPatientMemory(uid, memoryInput);
+  const clinical = parseStoredClinicalNotes(uid, clinicalInput);
+  return { record, memory, clinical };
+}
+
+export class JsonPatientRepository implements PatientRepository {
   async listPatientIds(): Promise<PatientId[]> {
     return [...PATIENT_IDS];
   }
@@ -160,6 +205,16 @@ export class JsonPatientRepository {
       ]);
 
     return { patient, cases, meetings, shipments, checkins, forms, knowledgeBase };
+  }
+
+  async getPatientDocuments(patientIdInput: unknown): Promise<PatientDocuments> {
+    const uid = parsePatientId(patientIdInput);
+    const [record, memory, clinical] = await Promise.all([
+      this.getPatientRecord(uid),
+      this.getPatientMemory(uid),
+      this.getPatientClinicalNotes(uid),
+    ]);
+    return { record, memory, clinical };
   }
 
   async getPatientMemory(patientIdInput: unknown): Promise<ConversationsFile> {

@@ -8,7 +8,9 @@ function jsonUnauthorized(message: string, status = 401) {
 
 export async function proxy(request: NextRequest) {
   const path = request.nextUrl.pathname;
-  if (path === "/login" || path.startsWith("/api/auth/")) return NextResponse.next();
+  if (path === "/login" || path === "/api/health" || path.startsWith("/api/auth/")) {
+    return NextResponse.next();
+  }
 
   const secret = process.env.APP_SESSION_SECRET;
   if (!secret || secret.length < 32) {

@@ -15,6 +15,8 @@ const config: AppConfig = {
   DATABASE_SSL_MODE: "disable",
   BACKEND_SERVICE_TOKEN: serviceToken,
   FRONTEND_ORIGIN: "http://localhost:3000",
+  OPENAI_TIMEOUT_MS: 20_000,
+  OPENAI_MAX_RETRIES: 0,
   LOG_LEVEL: "silent",
 };
 
