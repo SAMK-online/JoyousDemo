@@ -350,7 +350,7 @@ export interface Handoff {
 
 export interface ReviewFlag {
   required: true;
-  reason: "third_party_suicide_loss" | "third_party_suicide_risk";
+  reason: "self_harm_risk" | "third_party_suicide_loss" | "third_party_suicide_risk";
   logged: true;
   sent: false;
 }

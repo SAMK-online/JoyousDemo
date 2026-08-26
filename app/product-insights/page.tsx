@@ -1,18 +1,10 @@
-import Link from "next/link";
-
 import { ProductInsightsChat } from "@/components/ProductInsightsChat";
-import { JsonPatientRepository } from "@/lib/data/jsonPatientRepository";
-import { buildTier3ProductInsights } from "@/lib/insights/tier3ProductInsights";
+import { getInsightsReport } from "@/lib/api/backendClient";
 
 export const dynamic = "force-dynamic";
 
 export default async function ProductInsightsPage() {
-  const repository = new JsonPatientRepository();
-  const patientIds = await repository.listPatientIds();
-  const clinicalFiles = await Promise.all(
-    patientIds.map((uid) => repository.getPatientClinicalNotes(uid)),
-  );
-  const report = buildTier3ProductInsights(clinicalFiles);
+  const report = await getInsightsReport();
   const highPriorityCount = report.themes.filter((theme) => theme.priority === "high").length;
   const needsWorkCount = report.coverageSummary.partial + report.coverageSummary.gap;
 
@@ -29,9 +21,9 @@ export default async function ProductInsightsPage() {
         </div>
         <div className="insights-topbar-actions">
           <span className="environment-badge"><span /> Synthetic data</span>
-          <nav aria-label="Workspace navigation">
-            <Link className="back-link" href="/"><span aria-hidden="true">←</span> Patient assistant</Link>
-          </nav>
+          <form action="/api/auth/logout" method="post">
+            <button className="workspace-logout" type="submit">Sign out</button>
+          </form>
         </div>
       </header>
 

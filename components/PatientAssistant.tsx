@@ -29,6 +29,7 @@ interface ChatApiResponse extends AssistantAnswer {
   patientId: PatientId;
   asOfDate: string;
   generation: GenerationMetadata;
+  sessionId: string;
 }
 
 const patientSuggestions: Record<PatientId, string[]> = {
@@ -117,6 +118,7 @@ export function PatientAssistant({ patients }: { patients: PatientListItem[] }) 
   const [messages, setMessages] = useState<ChatMessage[]>([makeWelcome(patient)]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [sessionId, setSessionId] = useState<string>();
   const endRef = useRef<HTMLDivElement>(null);
   const requestControllerRef = useRef<AbortController | null>(null);
 
@@ -126,6 +128,7 @@ export function PatientAssistant({ patients }: { patients: PatientListItem[] }) 
     setIsLoading(false);
     setMessages([makeWelcome(patient)]);
     setInput("");
+    setSessionId(undefined);
   }, [patient]);
 
   useEffect(() => {
@@ -159,6 +162,7 @@ export function PatientAssistant({ patients }: { patients: PatientListItem[] }) 
             role: message.role,
             text: message.text,
           })),
+          sessionId,
         }),
         signal: controller.signal,
       });
@@ -167,6 +171,8 @@ export function PatientAssistant({ patients }: { patients: PatientListItem[] }) 
       if (!response.ok || "error" in payload) {
         throw new Error("error" in payload ? payload.error : "The assistant could not respond.");
       }
+
+      setSessionId(payload.sessionId);
 
       setMessages((current) => [
         ...current,
@@ -209,6 +215,7 @@ export function PatientAssistant({ patients }: { patients: PatientListItem[] }) 
     requestControllerRef.current = null;
     setIsLoading(false);
     setMessages([makeWelcome(patient)]);
+    setSessionId(undefined);
   }
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
@@ -228,10 +235,10 @@ export function PatientAssistant({ patients }: { patients: PatientListItem[] }) 
           </div>
         </div>
         <div className="topbar-actions">
-          <nav aria-label="Workspace navigation">
-            <a className="insights-link" href="/product-insights">Product insights <span aria-hidden="true">↗</span></a>
-          </nav>
           <div className="tier-badge"><span /> Tier 3 · Clinical</div>
+          <form action="/api/auth/logout" method="post">
+            <button className="workspace-logout" type="submit">Sign out</button>
+          </form>
         </div>
       </header>
 

@@ -1,0 +1,50 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    services:
+      postgres:
+        image: postgres:17-alpine
+        env:
+          POSTGRES_DB: joyous_test
+          POSTGRES_USER: joyous
+          POSTGRES_PASSWORD: joyous
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U joyous -d joyous_test"
+          --health-interval 5s
+          --health-timeout 3s
+          --health-retries 10
+    env:
+      DATABASE_URL: postgresql://joyous:joyous@127.0.0.1:5432/joyous_test
+      DATABASE_SSL_MODE: disable
+      TEST_DATABASE_URL: postgresql://joyous:joyous@127.0.0.1:5432/joyous_test
+      BACKEND_API_URL: http://127.0.0.1:4000
+      BACKEND_SERVICE_TOKEN: ci-service-token-at-least-24-characters
+      APP_SESSION_SECRET: ci-session-secret-at-least-32-characters-long
+      PATIENT_ACCESS_PASSWORD: ci-patient-password
+      PRODUCT_ACCESS_PASSWORD: ci-product-password
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run db:migrate
+      - run: npm run db:seed
+      - run: npm test -- --run
+      - run: npm run build:api
+      - run: npm run build

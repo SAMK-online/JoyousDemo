@@ -1,0 +1,77 @@
+services:
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: joyous
+      POSTGRES_USER: joyous
+      POSTGRES_PASSWORD: joyous
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - joyous_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U joyous -d joyous"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    restart: unless-stopped
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    environment:
+      NODE_ENV: production
+      PORT: 4000
+      HOST: 0.0.0.0
+      DATABASE_URL: postgresql://joyous:joyous@postgres:5432/joyous
+      DATABASE_SSL_MODE: disable
+      BACKEND_SERVICE_TOKEN: ${BACKEND_SERVICE_TOKEN}
+      FRONTEND_ORIGIN: http://localhost:3000
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      OPENAI_MODEL: ${OPENAI_MODEL:-gpt-5.6-luna}
+      LOG_LEVEL: info
+    command: ["sh", "-c", "node backend/dist/db/migrate.js && node backend/dist/db/seed.js && node backend/dist/server.js"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:4000:4000"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:4000/health/ready"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    read_only: true
+    tmpfs:
+      - /tmp
+    restart: unless-stopped
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.web
+    environment:
+      NODE_ENV: production
+      BACKEND_API_URL: http://api:4000
+      BACKEND_SERVICE_TOKEN: ${BACKEND_SERVICE_TOKEN}
+      APP_SESSION_SECRET: ${APP_SESSION_SECRET}
+      PATIENT_ACCESS_PASSWORD: ${PATIENT_ACCESS_PASSWORD}
+      PRODUCT_ACCESS_PASSWORD: ${PRODUCT_ACCESS_PASSWORD}
+    depends_on:
+      api:
+        condition: service_healthy
+    ports:
+      - "3000:3000"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:3000/login"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    read_only: true
+    tmpfs:
+      - /tmp
+    restart: unless-stopped
+
+volumes:
+  joyous_postgres_data:

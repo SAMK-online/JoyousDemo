@@ -11,7 +11,7 @@ type InsightsMessage = {
   result?: ProductInsightAnswer;
 };
 
-type InsightsApiResponse = ProductInsightAnswer & { reportAsOf: string };
+type InsightsApiResponse = ProductInsightAnswer & { reportAsOf: string; sessionId: string };
 
 const suggestions = [
   "Which gaps should we investigate first, and why?",
@@ -37,6 +37,7 @@ export function ProductInsightsChat() {
   const [messages, setMessages] = useState<InsightsMessage[]>([welcome]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [sessionId, setSessionId] = useState<string>();
   const requestControllerRef = useRef<AbortController | null>(null);
   const endRef = useRef<HTMLDivElement>(null);
 
@@ -71,6 +72,7 @@ export function ProductInsightsChat() {
             role: message.role,
             text: message.text,
           })),
+          sessionId,
         }),
         signal: controller.signal,
       });
@@ -78,6 +80,8 @@ export function ProductInsightsChat() {
       if (!response.ok || "error" in payload) {
         throw new Error("error" in payload ? payload.error : "The insights copilot could not respond.");
       }
+
+      setSessionId(payload.sessionId);
 
       setMessages((current) => [
         ...current,
@@ -117,6 +121,7 @@ export function ProductInsightsChat() {
     setMessages([welcome]);
     setInput("");
     setIsLoading(false);
+    setSessionId(undefined);
   }
 
   return (

@@ -1,0 +1,21 @@
+FROM node:20-alpine AS build
+WORKDIR /app
+COPY package.json package-lock.json ./
+RUN npm ci
+COPY tsconfig.json ./
+COPY backend ./backend
+COPY lib ./lib
+COPY JoyousPM_PatientAssistant_Case/data ./JoyousPM_PatientAssistant_Case/data
+RUN npm run build:api
+RUN npm prune --omit=dev
+
+FROM node:20-alpine AS runtime
+ENV NODE_ENV=production
+WORKDIR /app
+USER node
+COPY --from=build --chown=node:node /app/node_modules ./node_modules
+COPY --from=build --chown=node:node /app/backend/dist ./backend/dist
+COPY --from=build --chown=node:node /app/backend/migrations ./backend/migrations
+COPY --from=build --chown=node:node /app/JoyousPM_PatientAssistant_Case/data ./JoyousPM_PatientAssistant_Case/data
+EXPOSE 4000
+CMD ["node", "backend/dist/server.js"]

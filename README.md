@@ -1,183 +1,115 @@
-# Joyous Tier 3 Patient Assistant
+# Joyous patient-assistant platform
 
-A working conversational web app for the Joyous Junior Product Manager patient-assistant exercise. It combines Tier 1 current records, Tier 2 conversation memory, and filtered Tier 3 clinical context.
+A full-stack, safety-first demonstration of a grounded patient assistant and an isolated product-insights workspace. The repository contains a Next.js frontend, a dedicated Fastify API, PostgreSQL persistence, OpenAI response generation, deterministic clinical guardrails, role-gated access, and production container definitions.
 
-## Run locally
-
-Requirements:
-
-- Node.js 20 or newer
-- npm
-
-Create or update `.env` with your OpenAI API key:
-
-```dotenv
-OPENAI_API_KEY=your_api_key_here
-OPENAI_MODEL=gpt-5.6-luna
-```
-
-The repository includes an ignored `.env` file ready for the key and a committed `.env.example`. Restart the development server after changing either value.
-
-```bash
-npm install
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000).
-
-## Verify the build
-
-```bash
-npm run typecheck
-npm test
-npm run build
-```
-
-## What is implemented
-
-- All five synthetic patients
-- Server-side loading of the 38 Tier 1 files, five Tier 2 conversation files, and five Tier 3 visit-note files
-- Patient-ID allowlisting and record isolation
-- Normalized treatment, task, appointment, shipment, check-in, form, and safety state
-- Free-text intent routing
-- OpenAI Responses API generation with structured output
-- Bounded in-session conversation history
-- Patient-isolated retrieval of relevant prior SMS and app threads
-- Continuity for unresolved requests, prior staff replies, and recorded escalations
-- Authority rules that make current Tier 1 records override historical conversation claims
-- Detection of previously flagged assistant mistakes so they are not repeated
-- Patient-safe summarization of internal staff activity
-- Safe clinical-note normalization that excludes raw transcripts, clinical summaries, clinician identities, and internal note-to-file comments
-- Query-aware retrieval of dated provider statements and sanitized clinical plan items
-- Historical-plan labeling that never turns an old plan into a current medication instruction
-- A separate offline Tier 3 product-learning stream over patient utterances
-- An anonymized theme taxonomy with Tier 1 coverage, priority, and improvement recommendations
-- An internal dashboard and aggregate-only research copilot at `/product-insights`; its analysis never changes live patient responses
-- Patient-specific answers with source labels
-- Structured fact cards and state-aware suggested prompts
-- Deterministic crisis, urgent-symptom, and medication-change guardrails
-- Explicit human-handoff notices that never pretend a message was sent
-- Responsive desktop and mobile layouts
-- Scenario tests for all five patient stories
-
-The exercise date is fixed to **August 19, 2026** so relative account state remains consistent with the supplied dataset.
+All included patient records are synthetic. The scenario date is fixed to August 19, 2026.
 
 ## Architecture
 
 ```text
-React chat interface
-        |
-        v
-POST /api/chat
-        |
-        v
-Patient ID validation
-        |
-        v
-JsonPatientRepository (server-side Tier 1 + Tier 2 + Tier 3)
-        |
-        v
-Core normalization + conversation-memory normalization
-        |
-        v
-Query-aware memory selection (up to 3 relevant threads)
-        |
-        v
-Filtered clinical-context selection (up to 2 relevant visits)
-        |
-        v
-Safety-first intent routing
-        |
-        v
-Grounded answer + facts + sources + handoff state
+Browser
+  └─ HTTPS → Next.js web application
+                ├─ signed, HTTP-only role session
+                └─ server-only BFF routes
+                       └─ Bearer service credential → Fastify API
+                              ├─ Zod request boundary
+                              ├─ deterministic safety/authority engine
+                              ├─ selected memory + clinical retrieval
+                              ├─ OpenAI Responses API
+                              └─ PostgreSQL
+                                   ├─ patient source records
+                                   ├─ chat sessions/messages
+                                   └─ safety audit events
 ```
 
-The separate product-learning path is:
+The browser never receives the backend service token, OpenAI key, raw source records, raw clinical transcripts, or arbitrary database access. Patient chat and Product Insights are separate roles. Current Tier 1 facts remain authoritative over Tier 2 history and dated Tier 3 plans.
 
-```text
-Tier 3 visit transcripts
-        |
-        v
-Patient utterances only
-        |
-        v
-Deterministic theme aggregation
-        |
-        v
-Anonymized coverage gaps + prioritized opportunities
-        |
-        v
-Product and Clinical review before any Tier 1 change
+## Local setup
+
+Requirements: Node.js 20+, npm, and Docker Desktop.
+
+```bash
+npm install
+cp .env.example .env
+docker compose up -d postgres
+npm run db:migrate
+npm run db:seed
+npm run dev
 ```
 
-The application reads the supplied JSON directly rather than adding a database. The repository boundary allows a future database or internal API to replace the filesystem implementation without changing the UI or response policy.
+Configure every placeholder in `.env`. Generate strong values with `openssl rand -base64 48`. The required variables are:
 
-Only relevant slices of the selected patient's current record, up to three memory threads, and up to two filtered clinical visits are sent to OpenAI. The browser never receives raw patient JSON, raw visit transcripts, clinical summaries, internal note text, clinician identities, or the API key; arbitrary filesystem paths are rejected, and switching patients aborts in-flight requests and clears the visible chat.
+- `OPENAI_API_KEY` and `OPENAI_MODEL`
+- `DATABASE_URL`
+- `DATABASE_SSL_MODE` (`disable` locally; `verify-full` when the managed provider supplies a trusted certificate)
+- `BACKEND_API_URL` and `BACKEND_SERVICE_TOKEN`
+- `APP_SESSION_SECRET`
+- `PATIENT_ACCESS_PASSWORD` and `PRODUCT_ACCESS_PASSWORD`
 
-Tier 1 structured records remain the source of current truth. Tier 2 messages explain what the patient asked, what staff previously confirmed, and what remains unanswered. Historical AI answers are treated as claims rather than facts, and a supplied review flag causes the assistant to prefer the corrected current record.
+Open [http://localhost:3000](http://localhost:3000), choose a workspace, and use its configured password. The API readiness endpoint is [http://localhost:4000/health/ready](http://localhost:4000/health/ready).
 
-Tier 3 adds the documented reasoning behind dated provider decisions. It can explain why a decision was recorded, but it cannot diagnose, prescribe, or make an old plan current. Clinical evidence is attributed to its visit date and filtered before retrieval.
+## Run the containerized stack
 
-Tier 3 also powers an offline product-learning report. Deterministic rules analyze synthetic patient utterances without OpenAI, producing aggregate counts and authored paraphrases instead of raw quotes or identities. The internal research copilot receives only that de-identified aggregate report and compares recurring needs with current Tier 1 coverage. Nothing is promoted into the patient assistant without Product and Clinical review.
+After configuring `.env`:
 
-The current default is `gpt-5.6-luna`, configurable through `OPENAI_MODEL`. If `OPENAI_API_KEY` is absent or the API request fails, the app returns the existing deterministic grounded answer and labels it as a fallback.
+```bash
+docker compose up --build
+```
 
-## Useful demo prompts
+Compose starts PostgreSQL, applies migrations, seeds the synthetic source records, starts the API on port 4000, and starts the web application on port 3000. PostgreSQL and the API bind only to loopback; containers run as non-root with read-only filesystems and health checks.
 
-### Maya — P1042
+## Verification
 
-- “Where is my refill?”
-- “Did the Care Team ever reply about my held package?”
-- “What dose am I taking?”
-- “Do I need another visit?”
-- “Why did my provider move me to 45 mg?”
+```bash
+npm run typecheck
+npm test -- --run
+npm run build:api
+npm run build
+npm audit --omit=dev
+```
 
-### Devon — P1108
+GitHub Actions runs the same type, test, and production-build checks on pushes and pull requests. API tests cover service authentication, payload validation, health/readiness, normalized patient records, deterministic crisis handling, durable exchange contracts, and aggregate Product Insights.
 
-- “When will my medication ship?”
-- “Am I approved?”
-- “Did anyone answer my last approval message?”
-- “Am I being charged?”
-- “Why did the provider deny treatment?”
+## Runtime behavior
 
-### Ruth — P1203
+Patient assistant:
 
-- “Why haven’t I received anything when I was charged?”
-- “What is blocking my treatment?”
-- “What form is missing?”
-- “Why can’t the provider prescribe yet?”
-- “You previously told me medication would arrive. Is that still true?”
+- Reads normalized Tier 1, Tier 2 memory, and filtered Tier 3 clinical context from PostgreSQL.
+- Selects only relevant context before calling OpenAI.
+- Uses GPT-5.6 Luna by default for grounded conversational phrasing.
+- Bypasses the model for crisis, urgent medical, and medication-change guardrails.
+- Never claims to prescribe, diagnose, contact a team, replace a shipment, issue a refund, or complete an operational action.
+- Persists every exchange and creates a distinct safety audit event when review is required.
 
-### Alex — P1266
+Product Insights:
 
-- “This isn’t working. Can I take more?”
-- “How are my scores trending?”
-- “Why shouldn’t I increase my dose?”
-- “Did anyone get my last message?”
-- “I have been thinking about harming myself.”
+- Aggregates patient utterance themes offline and compares them with current Tier 1 coverage.
+- Sends only the de-identified aggregate report—not raw transcripts—to its insights copilot.
+- Cannot alter live patient behavior; findings require Product and Clinical review.
 
-### Tom — P1319
+If OpenAI is unavailable, the API returns the deterministic grounded baseline and labels it as a fallback. Request IDs, structured redacted logs, rate limits, strict service authentication, repository isolation, and database health checks are enabled at the backend boundary.
 
-- “Can I restart at my old 60 mg dose?”
-- “Did the Nurse Team answer my restart question?”
-- “When is my returning visit?”
-- “What is my account status?”
-- “Why can’t I restart at 60 mg?”
+## Database lifecycle
 
-## Safety model
+Migration files live in `backend/migrations` and are applied exactly once through the `app_migrations` table.
 
-The assistant reports existing information but does not prescribe, diagnose, approve treatment, issue refunds, replace shipments, or contact humans.
+```bash
+npm run db:migrate
+npm run db:seed
+```
 
-Crisis language and urgent physical symptoms bypass routine intent handling. Dose changes, prescription holds, returning-patient restart questions, worsening scores, side effects, identity verification, billing conflicts, and shipment exceptions generate explicit human-handoff states.
+The seed command is idempotent and intended for this synthetic demonstration. In a production integration, replace it with controlled ingestion from the source-of-truth patient, messaging, clinical, and fulfillment systems.
 
-The prototype tells the user when a handoff is needed and also says that it was **not sent**, because no messaging integration exists.
+## Deployment topology
 
-## Current limitations
+Deploy the API container and managed PostgreSQL in the same private region, then deploy the Next.js app on Vercel or as the web container. Configure:
 
-- OpenAI improves conversational phrasing for ordinary requests, while deterministic responses remain authoritative for crisis, urgent physical symptoms, and medication-change requests.
-- Supplied Tier 2 history is read-only; new demo messages are not persisted across sessions.
-- Tier 3 is explanatory and read-only; it does not expose raw transcripts or create clinical decisions.
-- The internal product-insights route is a demo surface and does not yet have production authentication or role-based access control.
-- Patient selection is a demo control, not production authentication.
-- Booking, billing, carrier, pharmacy, and Care Team actions are read-only simulations.
-- Safety review events are console-logged only; there is no production audit log, review queue, or persistence layer.
+- Web: `BACKEND_API_URL`, `BACKEND_SERVICE_TOKEN`, and the three access/session secrets.
+- API: `DATABASE_URL`, `BACKEND_SERVICE_TOKEN`, `FRONTEND_ORIGIN`, `OPENAI_API_KEY`, and `OPENAI_MODEL`.
+- Network: expose only API HTTPS publicly, restrict CORS to the exact web origin, and keep PostgreSQL private.
+
+Run migrations as a release step before switching traffic. Confirm `/health/ready`, perform patient and Product Insights smoke tests, verify persisted session/message counts, then monitor 5xx rate, model fallback rate, latency, rate-limit events, and safety-review events.
+
+## Production gaps before real patient data
+
+This is a professional synthetic-data platform, not a HIPAA production authorization. Before using real patient data, replace the workspace passwords with organization OIDC/SSO and patient-bound authorization, use a managed secret store and encrypted managed PostgreSQL with backups, connect safety handoffs to a staffed review queue with escalation SLAs, establish vendor BAAs and retention/deletion policies, add distributed tracing and alerting, and complete clinical, privacy, security, accessibility, load, and disaster-recovery reviews.

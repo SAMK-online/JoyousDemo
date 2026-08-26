@@ -120,6 +120,12 @@ function answerCrisis(context: Tier1PatientContext): AssistantAnswer {
     ],
     sources: source(crisisArticle.sourceFile, context.safetyCase ? "cases.json" : undefined),
     handoff: handoff("Nurse Team", "Possible self-harm or immediate-safety concern"),
+    review: {
+      required: true,
+      reason: "self_harm_risk",
+      logged: true,
+      sent: false,
+    },
   };
 }
 

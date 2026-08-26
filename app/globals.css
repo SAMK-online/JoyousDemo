@@ -2936,3 +2936,47 @@ summary:focus-visible {
     grid-template-columns: 1fr;
   }
 }
+
+.login-shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: radial-gradient(circle at 20% 10%, #fff7f2 0, transparent 35%), #faf8f8;
+}
+
+.login-card {
+  width: min(100%, 460px);
+  padding: 42px;
+  border: 1px solid #eadfe6;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 24px 70px rgba(73, 34, 66, 0.12);
+}
+
+.login-brand { display: flex; align-items: center; gap: 10px; margin-bottom: 32px; color: #5d3158; font-size: 21px; font-weight: 750; }
+.login-brand span { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 11px; background: #66355f; color: white; }
+.login-card h1 { margin: 6px 0 10px; color: #332632; font-size: clamp(30px, 6vw, 42px); letter-spacing: -0.04em; }
+.login-card > p:not(.eyebrow) { color: #776d76; line-height: 1.6; }
+.login-card form { display: grid; gap: 10px; margin: 28px 0 22px; }
+.login-card label { margin-top: 8px; color: #51474f; font-size: 13px; font-weight: 700; }
+.login-card input, .login-card select { width: 100%; padding: 13px 14px; border: 1px solid #d9cbd4; border-radius: 12px; background: white; color: #332632; font: inherit; }
+.login-card input:focus, .login-card select:focus { outline: 3px solid rgba(238, 119, 95, 0.2); border-color: #d96e5b; }
+.login-card button { margin-top: 12px; padding: 14px; border: 0; border-radius: 12px; background: #66355f; color: white; font: inherit; font-weight: 750; cursor: pointer; }
+.login-card button:hover { background: #51274c; }
+.login-card small { color: #958b93; }
+.login-error { margin-top: 18px; padding: 12px 14px; border-radius: 10px; background: #fff0ed; color: #9a3d31; font-size: 14px; }
+
+.workspace-logout {
+  padding: 9px 13px;
+  border: 1px solid #ded2da;
+  border-radius: 999px;
+  background: #fff;
+  color: #66355f;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.workspace-logout:hover { background: #f8f2f6; border-color: #cdbac7; }
